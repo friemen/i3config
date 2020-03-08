@@ -8,7 +8,7 @@ label=
 color=#00FF00
 
 [wifi]
-command=$cripts/wifi.sh wlp4s0
+command=$cripts/wifi.sh wlo1
 label=
 
 [vpn]
@@ -21,7 +21,7 @@ label=
 
 [memory]
 command=$cripts/memory.sh
-color=#6060FF
+color=#A0A0A0
 label=
 
 [diskfree]
@@ -31,8 +31,7 @@ label=
 
 [weather]
 command=$cripts/weather.sh
-interval=600
-color=#92CBE6
+color=#A0A0A0
 
 [date]
 command=date "+%a %d.%m."

@@ -1,0 +1,5 @@
+1-Internal only
+2-Both
+3-External only
+4-Projection left
+5-Projection right
