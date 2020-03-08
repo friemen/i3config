@@ -1,0 +1,307 @@
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+set $mod     Mod4
+set $normal  #5D53C3
+set $urgent  #D37458
+set $cripts  ~/.config/i3
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+#font pango: Font Awesome 10
+#font pango:monospace 10
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+font pango:DejaVu Sans 10
+
+# Before i3 v4.8, we used to recommend this one as the default:
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# The font above is very space-efficient, that is, it looks good, sharp and
+# clear in small sizes. However, its unicode glyph coverage is limited, the old
+# X core fonts rendering does not support right-to-left and this being a bitmap
+# font, it doesn’t scale on retina/hidpi displays.
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+q kill
+
+# start dmenu (a program launcher)
+# bindsym $mod+d exec dmenu_run
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu "dmenu -b -i -sb $normal"
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+odiaeresis focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+odiaeresis move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# toggle floating window being sticky
+bindsym $mod+minus sticky toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+##############################################################################
+# Assign icons to workspaces
+# Font Awesome 4.7 icons as unicode characters
+
+# fa-terminal
+set $ws1 "1: "
+# fa-email
+set $ws2 "2: "
+# fa-firefox
+set $ws3 "3: "
+set $ws4 "4: ℰ"
+# fa-music
+set $ws5 "5: "
+set $ws6 "6: "
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym odiaeresis resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+    position top
+    font pango: Font Awesome 8
+    separator_symbol "   "
+    status_command cripts=$cripts/blocks i3blocks -c $cripts/blocks/config
+    colors {
+        background #000000
+        statusline #FFFFFF
+        separator  #666666
+
+        focused_workspace  $normal $normal #FFFFFF
+        active_workspace   #333333 #222222 #FFFFFF
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   $urgent $urgent #FFFFFF
+        binding_mode       $urgent $urgent #FFFFFF
+    }
+}
+
+##############################################################################
+
+# class                 border  backgr. text    indicator child_border
+client.focused          $normal $normal #ffffff #928CD7   $normal
+client.urgent           $urgent $urgent #ffffff $urgent   $urgent
+
+
+
+##############################################################################
+# My additional settings
+
+# Desktop env feature checklist
+# - Display brightness control
+# - Screen lock
+# - Support for multiple monitors --> xrandr
+# - Display of notifications
+# - Switch from/to external soundcard --> pavucontrol
+# - Automount of USB devices --> udiskie
+# - Network device+connection control --> nmcli
+# - Keyboard speed
+# - Play music using Clementine
+# - Volume control via keyboard
+# - Trackpad natural scrolling
+# - Nightlight
+# - TODO Automatic lock on suspend
+# - TODO Authentication integration (PolicyKit)
+# - Keyboard light toggle --> just works with Fn+Space
+
+# Extras to install on Ubuntu 18.04
+# sudo apt install compton i3blocks feh pavucontrol clementine xbacklight fonts-font-awesome udiskie htop
+
+# SSH-Agent needs to be started
+exec_always $cripts/gnome-keyring.sh
+
+# Transparency
+exec --no-startup-id killall compton ; compton -Gf -b --vsync opengl
+
+# Redshift with lat-lon coords of Bonn, Germany
+exec --no-startup-id redshift -l 50.73438:7.09549
+
+# Background wallpaper display
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
+
+# Screen lock
+bindsym $mod+Ctrl+l exec --no-startup-id $cripts/lock.sh
+
+# Keyboard delay and rate
+exec --no-startup-id xset r rate 250 80
+
+# Trackpad Natural Scrolling
+exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
+
+# Automount USB devices
+exec --no-startup-id udiskie -ans &
+
+# Pulse Audio controls
+# increase sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id $cripts/volctl.sh +5%
+# decrease sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id $cripts/volctl.sh -5%
+# mute sound
+bindsym XF86AudioMute exec --no-startup-id $cripts/volctl.sh mute
+
+# Music playback control based on Clementine
+bindsym $mod+F11 exec --no-startup-id clementine --play-pause
+bindsym $mod+F12 exec --no-startup-id clementine --next
+bindsym $mod+i exec --no-startup-id clementine --toggle-pretty-osd
+
+# Screen brightness controls
+# Make sure /etc/X11/xorg.conf exists with contents:
+#
+# Section "Device"
+#         Identifier  "Intel Graphics"
+#         Driver      "intel"
+#         Option      "Backlight"  "intel_backlight"
+# EndSection
+#
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+
+bindsym $mod+less move workspace to output right
+bindsym $mod+x exec --no-startup-id $cripts/appswitch.sh
+
+# Open htop in floating terminal window
+bindsym $mod+p exec --no-startup-id gnome-terminal --title "Htop" -e htop
+for_window [title="Htop"] floating enable, resize set 1920 600, move position center
+
+# Open calendar in floating terminal window
+bindsym $mod+c exec --no-startup-id gnome-terminal --title "Calendar" -e $cripts/calendar.sh
+for_window [title="Calendar"] floating enable, resize set 640 200, move position 640 40
+
+# Open flameshot
+bindsym Print exec --no-startup-id flameshot gui
+
+# Default title format
+for_window [class=".*"] title_format "  %title"
+
+# Specific window settings
+# (you can find classnames by starting xprop and clicking the desired window)
+for_window [class="Gnome-calculator"] floating enable border pixel 6
+for_window [class="Pavucontrol"] floating enable, resize set 640 480, move position center
+
+# Thunderbird + Skype
+assign [class="Thunderbird"] $ws2
+assign [class="Skype"] $ws2
+
+# Firefox
+assign [class="Firefox"] $ws3
+
+# Emacs
+assign [class="Emacs"] $ws4
+for_window [class="Emacs"] workspace $ws4
+
+# Music
+assign [class="cantata"] $ws5
+assign [class="Mixxx"] $ws5
+assign [class="Clementine"] $ws5
+
+# Krusader
+assign [class="krusader"] $ws6

@@ -1,0 +1,36 @@
+
+interval=5
+color=#FFFFFF
+
+[battery]
+command=$cripts/battery.sh
+label=
+color=#00FF00
+
+[wifi]
+command=$cripts/wifi.sh wlp4s0
+label=
+
+[vpn]
+command=$cripts/vpn.sh
+
+[cpu]
+command=$cripts/cpu_usage.sh
+color=#FF6060
+label=
+
+[memory]
+command=$cripts/memory.sh
+color=#6060FF
+label=
+
+[Weather]
+command=wget wttr.in/Bonn?format=3 -q -O -
+interval=600
+color=#92CBE6
+
+[date]
+command=date "+%a %d.%m."
+
+[clock]
+command=date "+%H:%M   "
