@@ -275,8 +275,8 @@ bindsym $mod+p exec --no-startup-id gnome-terminal --title "Htop" -e htop
 for_window [title="Htop"] floating enable, resize set 1600 600, move position center
 
 # Open calendar in floating terminal window
-bindsym $mod+c exec --no-startup-id gnome-terminal --title "Calendar" -e $cripts/calendar.sh
-for_window [title="Calendar"] floating enable, resize set 640 200, move position 640 40
+bindsym $mod+c exec --no-startup-id gnome-terminal --title "3 months" -e $cripts/calendar.sh
+for_window [title="3 months"] floating enable, resize set 640 200
 
 # Open flameshot
 bindsym Print exec --no-startup-id flameshot gui
