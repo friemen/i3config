@@ -21,10 +21,20 @@ ln -s ~/Projects/i3config/hadid/i3 ~/.config/i3
 
 
 Key binding | Function
-:--- | ---:
-<kbd>Super</kbd><kbd>q</kbd>        | Kill application
-<kbd>Super</kbd><kbd>f</kbd>        | Toggle fullscreen
-<kbd>Super</kbd><kbd>Left<kbd>      | Focus left
-<kbd>Super</kbd><kbd>Right</kbd>    | Focus right
-<kbd>Super</kbd><kbd>Up</kbd>       | Focus up
-<kbd>Super</kbd><kbd>Down</kbd>     | Focus down
+:--- | :---
+<kbd>Super</kbd><kbd>Enter</kbd>                    | Start terminal
+<kbd>Super</kbd><kbd>d</kbd>                        | Dmenu applications
+<kbd>Super</kbd><kbd>q</kbd>                        | Kill selected window
+<kbd>Super</kbd><kbd>f</kbd>                        | Toggle fullscreen window
+<kbd>Super</kbd><kbd>1</kbd> ... <kbd>0</kbd>       | Switch to workspace 1 ... 10
+<kbd>Super</kbd><kbd>Escape</kbd>                   | Switch workspace back and forth
+<kbd>Super</kbd><kbd>Left</kbd>                     | Focus window left
+<kbd>Super</kbd><kbd>Right</kbd>                    | Focus window right
+<kbd>Super</kbd><kbd>Up</kbd>                       | Focus window up
+<kbd>Super</kbd><kbd>Down</kbd>                     | Focus window down
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>Left</kbd>     | Move window left
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>Right</kbd>    | Move window right
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>Up</kbd>       | Move window up
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>Down</kbd>     | Move window down
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>Space</kbd>    | Toggle floating mode for window
+<kbd>Super</kbd><kbd>-</kbd>                        | Toggle floating window stickiness
