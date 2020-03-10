@@ -22,9 +22,9 @@ ln -s ~/Projects/i3config/hadid/i3 ~/.config/i3
 
 Key binding | Function
 :--- | ---:
-<kbd>Super+q</kbd>        | Kill application
-<kbd>Super+f</kbd>        | Toggle fullscreen
-<kbd>Super>+Left</kbd>    | Focus left
-<kbd>Super>+Right</kbd>   | Focus right
-<kbd>Super>+Up</kbd>    | Focus up
-<kbd>Super>+Down</kbd>   | Focus down
+<kbd>Super</kbd><kbd>q</kbd>        | Kill application
+<kbd>Super</kbd><kbd>f</kbd>        | Toggle fullscreen
+<kbd>Super</kbd><kbd>Left<kbd>      | Focus left
+<kbd>Super</kbd><kbd>Right</kbd>    | Focus right
+<kbd>Super</kbd><kbd>Up</kbd>       | Focus up
+<kbd>Super</kbd><kbd>Down</kbd>     | Focus down
