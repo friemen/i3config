@@ -24,6 +24,7 @@ Key binding | Function
 :--- | :---
 <kbd>Super</kbd><kbd>Enter</kbd>                                | Start terminal
 <kbd>Super</kbd><kbd>d</kbd>                                    | Dmenu applications
+<kbd>Super</kbd><kbd>d</kbd>                                    | Dmenu special applications
 <kbd>Super</kbd><kbd>q</kbd>                                    | Kill selected window
 <kbd>Super</kbd><kbd>e</kbd>                                    | Tiling workspace layout
 <kbd>Super</kbd><kbd>s</kbd>                                    | Stacking workspace layout
@@ -34,7 +35,8 @@ Key binding | Function
 <kbd>Super</kbd><kbd>f</kbd>                                    | Toggle fullscreen
 <kbd>Super</kbd><kbd>1</kbd> ... <kbd>0</kbd>                   | Switch to workspace 1 ... 10
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>1</kbd> ... <kbd>0</kbd>   | Move focussed window to workspace 1 ... 10
-<kbd>Super</kbd><kbd>Tab</kbd>                                  | Switch workspace back and forth
+<kbd>Super</kbd><kbd>Tab</kbd>                                  | Switch back and forth between workspaces
+<kbd>Super</kbd><kbd><</kbd>                                    | Move workspace to other output
 <kbd>Super</kbd><kbd>Left</kbd>                                 | Focus window left
 <kbd>Super</kbd><kbd>Right</kbd>                                | Focus window right
 <kbd>Super</kbd><kbd>Up</kbd>                                   | Focus window up
@@ -48,7 +50,7 @@ Key binding | Function
 <kbd>Super</kbd><kbd>r</kbd>                                    | Activate resize mode
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>l</kbd>                     | Lock desktop
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>e</kbd>                    | Exit i3
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>c</kbd>                    | Reload config i3
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>c</kbd>                    | Reload i3 config
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>r</kbd>                    | Restart i3
 <kbd>Super</kbd><kbd>p</kbd>                                    | Processes in Htop
 <kbd>Super</kbd><kbd>i</kbd>                                    | Clementine: show track info
