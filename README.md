@@ -24,7 +24,7 @@ Key binding | Function
 :--- | :---
 <kbd>Super</kbd><kbd>Enter</kbd>                                | Start terminal
 <kbd>Super</kbd><kbd>d</kbd>                                    | Dmenu applications
-<kbd>Super</kbd><kbd>d</kbd>                                    | Dmenu special applications
+<kbd>Super</kbd><kbd>x</kbd>                                    | Dmenu special applications
 <kbd>Super</kbd><kbd>q</kbd>                                    | Kill selected window
 <kbd>Super</kbd><kbd>e</kbd>                                    | Tiling workspace layout
 <kbd>Super</kbd><kbd>s</kbd>                                    | Stacking workspace layout
