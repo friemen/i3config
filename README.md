@@ -8,7 +8,8 @@ some more packages that are required to make everything work in my i3
 config:
 
 ```
-sudo apt install i3 i3blocks compton feh pavucontrol clementine xbacklight fonts-font-awesome udiskie htop
+sudo apt install i3 i3blocks compton feh pavucontrol clementine \
+xbacklight fonts-font-awesome udiskie htop flameshot
 ```
 
 Clone this repo, then create a link in your ~/.config folder like so:
@@ -16,3 +17,14 @@ Clone this repo, then create a link in your ~/.config folder like so:
 ```
 ln -s ~/Projects/i3config/hadid/i3 ~/.config/i3
 ```
+
+
+
+Key binding | Function
+:--- | ---:
+<kbd>Super+q</kbd>        | Kill application
+<kbd>Super+f</kbd>        | Toggle fullscreen
+<kbd>Super>+Left</kbd>    | Focus left
+<kbd>Super>+Right</kbd>   | Focus right
+<kbd>Super>+Up</kbd>    | Focus up
+<kbd>Super>+Down</kbd>   | Focus down
