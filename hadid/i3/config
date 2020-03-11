@@ -196,7 +196,7 @@ client.urgent           $urgent $urgent #ffffff $urgent   $urgent
 # - Display of notifications
 # - Switch from/to external soundcard --> pavucontrol
 # - Automount of USB devices --> udiskie
-# - Network device+connection control --> nmcli
+# - Network device+connection control --> nmcli + nm-applet
 # - Keyboard speed
 # - Play music using Clementine
 # - Volume control via keyboard
@@ -207,7 +207,7 @@ client.urgent           $urgent $urgent #ffffff $urgent   $urgent
 # - Keyboard light toggle --> just works with Fn+Space
 
 # Extras to install on Ubuntu 18.04
-# sudo apt install compton i3blocks feh pavucontrol clementine xbacklight fonts-font-awesome udiskie flameshot htop
+# sudo apt install compton i3blocks feh pavucontrol clementine xbacklight fonts-font-awesome udiskie redshift flameshot htop
 
 # SSH-Agent needs to be started
 exec_always $cripts/gnome-keyring.sh
@@ -235,6 +235,9 @@ exec --no-startup-id udiskie -ans &
 
 # Screenshot tool
 exec --no-startup-id flameshot &
+
+# Network-Manager applet
+exec --no-startup-id nm-applet &
 
 # Pulse Audio controls
 # increase sound volume

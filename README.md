@@ -9,7 +9,7 @@ config:
 
 ```
 sudo apt install i3 i3blocks compton feh pavucontrol clementine \
-xbacklight fonts-font-awesome udiskie htop flameshot
+xbacklight fonts-font-awesome udiskie htop flameshot redshift
 ```
 
 Clone this repo, then create a link in your ~/.config folder like so:
