@@ -53,7 +53,8 @@ Key binding | Function
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>c</kbd>                    | Reload i3 config
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>r</kbd>                    | Restart i3
 <kbd>Super</kbd><kbd>p</kbd>                                    | Processes in Htop
-<kbd>Super</kbd><kbd>i</kbd>                                    | Clementine: show track info
+<kbd>Super</kbd><kbd>F10</kbd>                                  | Switch keyboard layout
 <kbd>Super</kbd><kbd>F11</kbd>                                  | Clementine: start/pause track
 <kbd>Super</kbd><kbd>F12</kbd>                                  | Clementine: next track
+<kbd>Super</kbd><kbd>i</kbd>                                    | Clementine: show track info
 <kbd>Print</kbd>                                                | Flameshot: take screenshot

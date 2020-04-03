@@ -38,4 +38,7 @@ color=#92CBE6
 command=date "+%a %d.%m."
 
 [clock]
-command=date "+%H:%M   "
+command=date "+%H:%M  "
+
+[kbdlayout]
+command=$cripts/kbdlayout.sh

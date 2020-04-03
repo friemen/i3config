@@ -202,9 +202,10 @@ client.urgent           $urgent $urgent #ffffff $urgent   $urgent
 # - Volume control via keyboard
 # - Trackpad natural scrolling
 # - Nightlight
+# - Cycling through keyboard layouts
+# - Keyboard light toggle --> just works with Fn+Space
 # - TODO Automatic lock on suspend
 # - TODO Authentication integration (PolicyKit)
-# - Keyboard light toggle --> just works with Fn+Space
 
 # Extras to install on Ubuntu 18.04
 # sudo apt install compton i3blocks feh pavucontrol clementine xbacklight fonts-font-awesome udiskie redshift flameshot htop
@@ -238,6 +239,9 @@ exec --no-startup-id flameshot &
 
 # Network-Manager applet
 exec --no-startup-id nm-applet &
+
+# Cycling through keyboard layouts
+bindsym $mod+F10 exec --no-startup-id $cripts/cycle-kbd-layout.sh
 
 # Pulse Audio controls
 # increase sound volume
