@@ -58,3 +58,4 @@ Key binding | Function
 <kbd>Super</kbd><kbd>F12</kbd>                                  | Clementine: next track
 <kbd>Super</kbd><kbd>i</kbd>                                    | Clementine: show track info
 <kbd>Print</kbd>                                                | Flameshot: take screenshot
+<kbd>Caps lock</kbd>                                            | Compose

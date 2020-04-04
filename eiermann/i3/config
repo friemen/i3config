@@ -234,6 +234,12 @@ bindsym $mod+Ctrl+l exec --no-startup-id $cripts/lock.sh
 # Keyboard delay and rate
 exec --no-startup-id xset r rate 250 80
 
+# Cycling through keyboard layouts
+bindsym $mod+F10 exec --no-startup-id $cripts/cycle-kbd-layout.sh
+
+# Default keyboard layout on restart
+exec --no-startup-id setxkbmap -layout "de(nodeadkeys)" -option "compose:caps"
+
 # Trackpad Natural Scrolling
 exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
 
@@ -245,9 +251,6 @@ exec --no-startup-id flameshot &
 
 # Network-Manager applet
 exec --no-startup-id nm-applet &
-
-# Cycling through keyboard layouts
-bindsym $mod+F10 exec --no-startup-id $cripts/cycle-kbd-layout.sh
 
 # Pulse Audio controls
 # increase sound volume

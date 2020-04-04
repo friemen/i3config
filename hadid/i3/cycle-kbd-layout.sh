@@ -19,4 +19,4 @@ if [[ "$current_layout" == "$us" ]]; then
     next_layout="$de"
 fi
 notify-send -t 2000 "Switching keyboard layout: $next_layout"
-setxkbmap -layout "$next_layout"
+setxkbmap -layout "$next_layout" -option "compose:caps"

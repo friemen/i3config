@@ -2,6 +2,10 @@
 interval=5
 color=#FFFFFF
 
+[kbdlayout]
+command=$cripts/kbdlayout.sh
+label=
+
 [battery]
 command=$cripts/battery.sh
 label=
@@ -39,6 +43,3 @@ command=date "+%a %d.%m."
 
 [clock]
 command=date "+%H:%M  "
-
-[kbdlayout]
-command=$cripts/kbdlayout.sh
