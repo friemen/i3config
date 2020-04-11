@@ -1,11 +1,11 @@
 !!  AltGr + ijkl => Up Left Down Right
-!!               Shift   ?    ?    AltGr    ?              ?
-keycode  31 = i  I       i    I    Up       idotless       rightarrow
-keycode  44 = j  J       j    J    Left     dead_abovedot  dead_belowdot
-keycode  45 = k  K       k    K    Down     ampersand      kra
-keycode  46 = l  L       l    L    Right    Lstroke        lstroke
+!!               Shift   ?    ?    AltGr    Shift+AltGr    ?
+keycode  31 = i  I       i    I    Up       Up            rightarrow
+keycode  44 = j  J       j    J    Left     Left          dead_belowdot
+keycode  45 = k  K       k    K    Down     Down          kra
+keycode  46 = l  L       l    L    Right    Right         lstroke
 
 !!  AltGr + op => PageUp PageDown
-!!               Shift   ?    ?    AltGr    ?              ?
-keycode  32 = o  O       o    O    Prior    Oslash         oslash
-keycode  33 = p  P       p    P    Next     THORN          thorn
+!!               Shift   ?    ?    AltGr    Shift+AltGr    ?
+keycode  32 = o  O       x    y    Prior    Prior          oslash
+keycode  33 = p  P       p    P    Next     Next           thorn

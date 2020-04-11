@@ -235,7 +235,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id $cripts/lock.sh
 bindsym $mod+F9 exec --no-startup-id $cripts/cycle-kbd-layout.sh
 
 # Setup keyboard layout on restart
-exec --no-startup-id cripts=$cripts $cripts/setup-kbd.sh
+exec --no-startup-id $cripts/setup-kbd.sh "de(nodeadkeys)"
 
 # Trackpad Natural Scrolling
 exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
