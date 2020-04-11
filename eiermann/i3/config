@@ -30,10 +30,10 @@ bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu "dmenu -b -i -sb $normal"
 
 # change focus
+bindsym $mod+i focus up
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -42,10 +42,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
+bindsym $mod+Shift+i move up
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -231,14 +231,11 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
 # Screen lock
 bindsym $mod+Ctrl+l exec --no-startup-id $cripts/lock.sh
 
-# Keyboard delay and rate
-exec --no-startup-id xset r rate 250 80
-
 # Cycling through keyboard layouts
-bindsym $mod+F10 exec --no-startup-id $cripts/cycle-kbd-layout.sh
+bindsym $mod+F9 exec --no-startup-id $cripts/cycle-kbd-layout.sh
 
-# Default keyboard layout on restart
-exec --no-startup-id setxkbmap -layout "de(nodeadkeys)" -option "compose:caps"
+# Setup keyboard layout on restart
+exec --no-startup-id cripts=$cripts $cripts/setup-kbd.sh
 
 # Trackpad Natural Scrolling
 exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
@@ -261,9 +258,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id $cripts/volctl.sh -5%
 bindsym XF86AudioMute exec --no-startup-id  $cripts/volctl.sh mute
 
 # Music playback control based on Clementine
+bindsym $mod+F10 exec --no-startup-id clementine --toggle-pretty-osd
 bindsym $mod+F11 exec --no-startup-id clementine --play-pause
 bindsym $mod+F12 exec --no-startup-id clementine --next
-bindsym $mod+i exec --no-startup-id clementine --toggle-pretty-osd
 
 # Screen brightness controls
 # Make sure /etc/X11/xorg.conf exists with contents:

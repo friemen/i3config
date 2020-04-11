@@ -19,7 +19,6 @@ ln -s ~/Projects/i3config/hadid/i3 ~/.config/i3
 ```
 
 
-
 Key binding | Function
 :--- | :---
 <kbd>Super</kbd><kbd>Enter</kbd>                                | Start terminal
@@ -37,14 +36,14 @@ Key binding | Function
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>1</kbd> ... <kbd>0</kbd>   | Move focussed window to workspace 1 ... 10
 <kbd>Super</kbd><kbd>Tab</kbd>                                  | Switch back and forth between workspaces
 <kbd>Super</kbd><kbd><</kbd>                                    | Move workspace to other output
-<kbd>Super</kbd><kbd>Left</kbd>                                 | Focus window left
-<kbd>Super</kbd><kbd>Right</kbd>                                | Focus window right
-<kbd>Super</kbd><kbd>Up</kbd>                                   | Focus window up
-<kbd>Super</kbd><kbd>Down</kbd>                                 | Focus window down
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>Left</kbd>                 | Move window left
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>Right</kbd>                | Move window right
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>Up</kbd>                   | Move window up
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>Down</kbd>                 | Move window down
+<kbd>Super</kbd><kbd>i</kbd>                                    | Focus window up
+<kbd>Super</kbd><kbd>j</kbd>                                    | Focus window left
+<kbd>Super</kbd><kbd>k</kbd>                                    | Focus window down
+<kbd>Super</kbd><kbd>l</kbd>                                    | Focus window right
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>i</kbd>                    | Move window up
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>j</kbd>                    | Move window left
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>k</kbd>                    | Move window down
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>l</kbd>                    | Move window right
 <kbd>Super</kbd><kbd>v</kbd>                                    | Next tile split is vertical
 <kbd>Super</kbd><kbd>h</kbd>                                    | Next tile split is horizontal
 <kbd>Super</kbd><kbd>r</kbd>                                    | Activate resize mode
@@ -53,9 +52,9 @@ Key binding | Function
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>c</kbd>                    | Reload i3 config
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>r</kbd>                    | Restart i3
 <kbd>Super</kbd><kbd>p</kbd>                                    | Processes in Htop
-<kbd>Super</kbd><kbd>F10</kbd>                                  | Switch keyboard layout
+<kbd>Super</kbd><kbd>F9</kbd>                                   | Switch keyboard layout
+<kbd>Super</kbd><kbd>F10</kbd>                                  | Clementine: show playing track info
 <kbd>Super</kbd><kbd>F11</kbd>                                  | Clementine: start/pause track
 <kbd>Super</kbd><kbd>F12</kbd>                                  | Clementine: next track
-<kbd>Super</kbd><kbd>i</kbd>                                    | Clementine: show track info
 <kbd>Print</kbd>                                                | Flameshot: take screenshot
 <kbd>Caps lock</kbd>                                            | Compose
