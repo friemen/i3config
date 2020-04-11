@@ -15,6 +15,6 @@ keycode  33 = p  P       p    P    Next     Next           thorn
 !! keycode  22 = BackSpace BackSpace BackSpace Delete
 
 !! AltGr + comma/period => Home/End
-!!                    Shift                     AltGr
-keycode  59 = comma   semicolon comma semicolon Home   multiply periodcentered
-keycode  60 = period  colon     period colon    End    division U2026
+!!                    Shift                     AltGr  Shift+AltGr
+keycode  59 = comma   semicolon comma semicolon Home   Home         periodcentered
+keycode  60 = period  colon     period colon    End    End          U2026
