@@ -10,9 +10,13 @@ keycode  46 = l  L       l    L    Right    Right         lstroke
 keycode  32 = o  O       x    y    Prior    Prior          oslash
 keycode  33 = p  P       p    P    Next     Next           thorn
 
-!! AltGr + backspace => Delete
-!!                      Shift                         AltGr     Shift+AltGr
-!! keycode  22 = BackSpace BackSpace BackSpace Delete
+!! AltGr + numbersign => Insert
+!!                       Shift                            AltGr  Shift+AltGr
+keycode  51 = numbersign apostrophe numbersign apostrophe Insert Insert      rightsinglequotemark grave numbersign apostrophe rightsinglequotemark grave
+
+!! AltGr + acute => Delete
+!!                      Shift               AltGr     Shift+AltGr
+keycode  21 = acute     grave  acute grave  Delete    Delete       cedilla cedilla acute grave cedilla cedilla
 
 !! AltGr + comma/period => Home/End
 !!                    Shift                     AltGr  Shift+AltGr
