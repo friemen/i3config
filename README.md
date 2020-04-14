@@ -18,6 +18,7 @@ Clone this repo, then create a link in your ~/.config folder like so:
 ln -s ~/Projects/i3config/hadid/i3 ~/.config/i3
 ```
 
+## i3 specific keybindings
 
 Key binding | Function
 :--- | :---
@@ -57,4 +58,17 @@ Key binding | Function
 <kbd>Super</kbd><kbd>F11</kbd>                                  | Clementine: start/pause track
 <kbd>Super</kbd><kbd>F12</kbd>                                  | Clementine: next track
 <kbd>Print</kbd>                                                | Flameshot: take screenshot
+
+## Other keybindings (setxkbmap, xmodmap)
+
 <kbd>Caps lock</kbd>                                            | Compose
+<kbd>Super</kbd><kbd>n</kbd>                                    | Home
+<kbd>Super</kbd><kbd>m</kbd>                                    | End
+<kbd>Super</kbd><kbd>o</kbd>                                    | Page Up
+<kbd>Super</kbd><kbd>p</kbd>                                    | Page Down
+<kbd>Super</kbd><kbd>i</kbd>                                    | Up
+<kbd>Super</kbd><kbd>j</kbd>                                    | Left
+<kbd>Super</kbd><kbd>k</kbd>                                    | Down
+<kbd>Super</kbd><kbd>l</kbd>                                    | Right
+<kbd>Super</kbd><kbd>v</kbd>                                    | Insert
+<kbd>Super</kbd><kbd>d</kbd>                                    | Delete
