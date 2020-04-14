@@ -2,7 +2,7 @@
 
 de="de(nodeadkeys)"
 gb="gb"
-us="us"
+us="us(altgr-intl)"
 
 current_layout=`setxkbmap -query | grep layout | sed -n 's/layout:\s*\(.*\)/\1/p'`
 next_layout="$de"
@@ -21,4 +21,4 @@ fi
 notify-send -t 2000 "Switching keyboard layout: $next_layout"
 
 cripts="$( cd "$( dirname "$0" )" && pwd )"
-$cripts/setup-kbd.sh $next_layout
+$cripts/setup-kbd.sh "$next_layout"

@@ -10,15 +10,19 @@ keycode  46 = l  L       l    L    Right    Right         lstroke
 keycode  32 = o  O       x    y    Prior    Prior          oslash
 keycode  33 = p  P       p    P    Next     Next           thorn
 
-!! AltGr + numbersign => Insert
+!! AltGr + v => Insert
 !!                       Shift                            AltGr  Shift+AltGr
-keycode  51 = numbersign apostrophe numbersign apostrophe Insert Insert      rightsinglequotemark grave numbersign apostrophe rightsinglequotemark grave
+!keycode  51 = numbersign apostrophe numbersign apostrophe Insert Insert      rightsinglequotemark grave numbersign apostrophe rightsinglequotemark grave
+keycode  55 = v          V           v          V         Insert  Insert
 
-!! AltGr + acute => Delete
+!! AltGr + d => Delete
 !!                      Shift               AltGr     Shift+AltGr
-keycode  21 = acute     grave  acute grave  Delete    Delete       cedilla cedilla acute grave cedilla cedilla
+!keycode  21 = acute     grave  acute grave  Delete    Delete       cedilla cedilla acute grave cedilla cedilla
+keycode  40 =  d        D       d     D     Delete    Delete
 
-!! AltGr + comma/period => Home/End
+!! AltGr + n/m => Home/End
 !!                    Shift                     AltGr  Shift+AltGr
-keycode  59 = comma   semicolon comma semicolon Home   Home         periodcentered
-keycode  60 = period  colon     period colon    End    End          U2026
+!keycode  59 = comma   semicolon comma semicolon Home   Home         periodcentered
+!keycode  60 = period  colon     period colon    End    End          U2026
+keycode  57 = n       N         n      N        Home   Home
+keycode  58 = m       M         m      M        End    End
