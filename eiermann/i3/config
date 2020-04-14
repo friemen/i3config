@@ -274,7 +274,7 @@ bindsym $mod+F12 exec --no-startup-id clementine --next
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
-bindsym $mod+less move workspace to output right
+bindsym $mod+z move workspace to output right
 bindsym $mod+x exec --no-startup-id $cripts/appswitch.sh
 
 # Open htop in floating terminal window
