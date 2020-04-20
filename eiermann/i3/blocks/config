@@ -2,10 +2,6 @@
 interval=5
 color=#FFFFFF
 
-[kbdlayout]
-command=$cripts/kbdlayout.sh
-label=
-
 [battery]
 command=$cripts/battery.sh
 label=
@@ -14,9 +10,6 @@ color=#00FF00
 [wifi]
 command=$cripts/wifi.sh wlo1
 label=
-
-[vpn]
-command=$cripts/vpn.sh
 
 [cpu]
 command=$cripts/cpu_usage.sh
@@ -36,6 +29,13 @@ label=
 [weather]
 command=$cripts/weather.sh
 color=#A0A0A0
+
+[vpn]
+command=$cripts/vpn.sh
+
+[kbdlayout]
+command=$cripts/kbdlayout.sh
+label=
 
 [date]
 command=date "+%a %d.%m."
