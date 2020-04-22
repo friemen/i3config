@@ -71,13 +71,13 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -278,15 +278,16 @@ bindsym $mod+z move workspace to output right
 bindsym $mod+x exec --no-startup-id $cripts/appswitch.sh
 
 # Open htop in floating terminal window
-bindsym $mod+p exec --no-startup-id gnome-terminal --title "Htop" -e htop
+bindsym $mod+Ctrl+p exec --no-startup-id gnome-terminal --title "Htop" -e htop
 for_window [title="Htop"] floating enable, resize set 1600 600, move position center
 
 # Open calendar in floating terminal window
-bindsym $mod+c exec --no-startup-id gnome-terminal --title "3 months" -e $cripts/calendar.sh
+bindsym $mod+Ctrl+c exec --no-startup-id gnome-terminal --title "3 months" -e $cripts/calendar.sh
 for_window [title="3 months"] floating enable, resize set 640 200
 
 # Open flameshot
 bindsym Print exec --no-startup-id flameshot gui
+bindsym $mod+Ctrl+s exec --no-startup-id flameshot gui
 
 # Default title format
 for_window [class=".*"] title_format "  %title"

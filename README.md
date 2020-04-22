@@ -29,14 +29,14 @@ Key binding | Function
 <kbd>Super</kbd><kbd>e</kbd>                                    | Tiling workspace layout
 <kbd>Super</kbd><kbd>s</kbd>                                    | Stacking workspace layout
 <kbd>Super</kbd><kbd>w</kbd>                                    | Tabbed workspace layout
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>Space</kbd>                | Toggle floating mode for window
+<kbd>Super</kbd><kbd>Space</kbd>                                | Toggle floating mode for window
+<kbd>Super</kbd><kbd>Shift</kbd><kbd>Space</kbd>                | Switch focus between floating and other window
 <kbd>Super</kbd><kbd>-</kbd>                                    | Toggle floating window stickiness
-<kbd>Super</kbd><kbd>Space</kbd>                                | Switch focus between floating and other window
 <kbd>Super</kbd><kbd>f</kbd>                                    | Toggle fullscreen
 <kbd>Super</kbd><kbd>1</kbd> ... <kbd>0</kbd>                   | Switch to workspace 1 ... 10
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>1</kbd> ... <kbd>0</kbd>   | Move focussed window to workspace 1 ... 10
 <kbd>Super</kbd><kbd>Tab</kbd>                                  | Switch back and forth between workspaces
-<kbd>Super</kbd><kbd><</kbd>                                    | Move workspace to other output
+<kbd>Super</kbd><kbd>z</kbd>                                    | Move workspace to other output
 <kbd>Super</kbd><kbd>i</kbd>                                    | Focus window up
 <kbd>Super</kbd><kbd>j</kbd>                                    | Focus window left
 <kbd>Super</kbd><kbd>k</kbd>                                    | Focus window down
@@ -48,11 +48,13 @@ Key binding | Function
 <kbd>Super</kbd><kbd>v</kbd>                                    | Next tile split is vertical
 <kbd>Super</kbd><kbd>h</kbd>                                    | Next tile split is horizontal
 <kbd>Super</kbd><kbd>r</kbd>                                    | Activate resize mode
+<kbd>Super</kbd><kbd>Ctrl</kbd><kbd>s</kbd>                     | Flameshot: take screenshot
+<kbd>Super</kbd><kbd>Ctrl</kbd><kbd>c</kbd>                     | Calendar popup
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>l</kbd>                     | Lock desktop
+<kbd>Super</kbd><kbd>Ctrl</kbd><kbd>p</kbd>                     | Processes in Htop
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>e</kbd>                    | Exit i3
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>c</kbd>                    | Reload i3 config
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>r</kbd>                    | Restart i3
-<kbd>Super</kbd><kbd>p</kbd>                                    | Processes in Htop
 <kbd>Super</kbd><kbd>F9</kbd>                                   | Switch keyboard layout
 <kbd>Super</kbd><kbd>F10</kbd>                                  | Clementine: show playing track info
 <kbd>Super</kbd><kbd>F11</kbd>                                  | Clementine: start/pause track
@@ -61,7 +63,7 @@ Key binding | Function
 
 ## Other keybindings (setxkbmap, xmodmap)
 
-<kbd>Caps lock</kbd>                                            | Compose
+<kbd>Caps lock</kbd>                                            | Compose key
 <kbd>Super</kbd><kbd>n</kbd>                                    | Home
 <kbd>Super</kbd><kbd>m</kbd>                                    | End
 <kbd>Super</kbd><kbd>o</kbd>                                    | Page Up
