@@ -34,17 +34,17 @@ Key binding | Function
 <kbd>Super</kbd><kbd>-</kbd>                                    | Toggle floating window stickiness
 <kbd>Super</kbd><kbd>f</kbd>                                    | Toggle fullscreen
 <kbd>Super</kbd><kbd>1</kbd> ... <kbd>0</kbd>                   | Switch to workspace 1 ... 10
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>1</kbd> ... <kbd>0</kbd>   | Move focussed window to workspace 1 ... 10
+<kbd>Super</kbd><kbd>Alt</kbd><kbd>1</kbd> ... <kbd>0</kbd>     | Move focussed window to workspace 1 ... 10
 <kbd>Super</kbd><kbd>Tab</kbd>                                  | Switch back and forth between workspaces
 <kbd>Super</kbd><kbd>z</kbd>                                    | Move workspace to other output
 <kbd>Super</kbd><kbd>i</kbd>                                    | Focus window up
 <kbd>Super</kbd><kbd>j</kbd>                                    | Focus window left
 <kbd>Super</kbd><kbd>k</kbd>                                    | Focus window down
 <kbd>Super</kbd><kbd>l</kbd>                                    | Focus window right
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>i</kbd>                    | Move window up
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>j</kbd>                    | Move window left
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>k</kbd>                    | Move window down
-<kbd>Super</kbd><kbd>Shift</kbd><kbd>l</kbd>                    | Move window right
+<kbd>Super</kbd><kbd>Alt</kbd><kbd>i</kbd>                      | Move window up
+<kbd>Super</kbd><kbd>Alt</kbd><kbd>j</kbd>                      | Move window left
+<kbd>Super</kbd><kbd>Alt</kbd><kbd>k</kbd>                      | Move window down
+<kbd>Super</kbd><kbd>Alt</kbd><kbd>l</kbd>                      | Move window right
 <kbd>Super</kbd><kbd>v</kbd>                                    | Next tile split is vertical
 <kbd>Super</kbd><kbd>h</kbd>                                    | Next tile split is horizontal
 <kbd>Super</kbd><kbd>r</kbd>                                    | Activate resize mode
