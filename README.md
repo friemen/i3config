@@ -74,3 +74,9 @@ Key binding | Function
 <kbd>Super</kbd><kbd>l</kbd>                                    | Right
 <kbd>Super</kbd><kbd>v</kbd>                                    | Insert
 <kbd>Super</kbd><kbd>d</kbd>                                    | Delete
+
+## Ideas / Todos
+
+- Remove support for gb keyboard layout
+- Document shortcuts as keyboad editor layouts
+- Write/read tempfiles to/from a /tmp/i3-user folder
