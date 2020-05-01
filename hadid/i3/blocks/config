@@ -26,20 +26,36 @@ command=$cripts/diskfree.sh
 color=#A0A0A0
 label=
 
-[weather]
-command=$cripts/weather.sh
-interval=600
-color=#92CBE6
+[separator]
+markup=pango
+full_text=<span foreground="white" size="x-large"></span>
 
 [vpn]
 command=$cripts/vpn.sh
 
+[volume]
+label=🔈
+command=$cripts/pulseaudio.sh
+
 [kbdlayout]
 command=$cripts/kbdlayout.sh
 label=
+
+[separator]
+markup=pango
+full_text=<span foreground="white" size="x-large"></span>
+
+[weather]
+command=$cripts/weather.sh
+interval=600
+color=#92CBE6
 
 [date]
 command=date "+%a %d.%m."
 
 [clock]
 command=date "+%H:%M  "
+
+[separator]
+markup=pango
+full_text=<span foreground="white" size="x-large">     </span>
