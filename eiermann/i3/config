@@ -305,6 +305,7 @@ for_window [class="Gnome-calculator"] floating enable
 for_window [class="KeePass2"] floating enable
 for_window [class="Pavucontrol"] floating enable, resize set 640 800, move position center
 for_window [class="Gnome-calendar"] floating enable
+for_window [title="gedit"] floating enable, resize set 640 800, move position center
 
 # Thunderbird + Skype
 assign [class="Thunderbird"] $ws2

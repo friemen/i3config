@@ -77,6 +77,5 @@ Key binding | Function
 
 ## Ideas / Todos
 
-- Remove support for gb keyboard layout
 - Document shortcuts as keyboad editor layouts
 - Write/read tempfiles to/from a /tmp/i3-user folder
