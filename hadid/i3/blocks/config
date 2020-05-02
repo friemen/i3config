@@ -24,26 +24,29 @@ label=
 [diskfree]
 command=$cripts/diskfree.sh
 color=#A0A0A0
-label=
+label=
 
 [separator]
 markup=pango
-full_text=<span foreground="white" size="x-large"></span>
+full_text=<span foreground="#5D53C3" size="large"></span>
 
-[vpn]
-command=$cripts/vpn.sh
+[displays]
+command=$cripts/displays.sh
 
 [volume]
-label=🔈
 command=$cripts/pulseaudio.sh
+label=
 
 [kbdlayout]
 command=$cripts/kbdlayout.sh
 label=
 
+[vpn]
+command=$cripts/vpn.sh
+
 [separator]
 markup=pango
-full_text=<span foreground="white" size="x-large"></span>
+full_text=<span foreground="#5D53C3" size="large"></span>
 
 [weather]
 command=$cripts/weather.sh
@@ -52,10 +55,12 @@ color=#92CBE6
 
 [date]
 command=date "+%a %d.%m."
+label=
 
 [clock]
 command=date "+%H:%M  "
+label=
 
 [separator]
 markup=pango
-full_text=<span foreground="white" size="x-large">     </span>
+full_text=<span foreground="#5D53C3" size="large">   </span>
