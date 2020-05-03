@@ -115,16 +115,16 @@ bindsym $mod+0 workspace $ws10
 bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
-bindsym $mod+Mod1+1 move container to workspace $ws1
-bindsym $mod+Mod1+2 move container to workspace $ws2
-bindsym $mod+Mod1+3 move container to workspace $ws3
-bindsym $mod+Mod1+4 move container to workspace $ws4
-bindsym $mod+Mod1+5 move container to workspace $ws5
-bindsym $mod+Mod1+6 move container to workspace $ws6
-bindsym $mod+Mod1+7 move container to workspace 7
-bindsym $mod+Mod1+8 move container to workspace 8
-bindsym $mod+Mod1+9 move container to workspace 9
-bindsym $mod+Mod1+0 move container to workspace $ws10
+bindsym $mod+Mod1+1 exec --no-startup-id $cripts/move-and-follow.sh $ws1
+bindsym $mod+Mod1+2 exec --no-startup-id $cripts/move-and-follow.sh $ws2
+bindsym $mod+Mod1+3 exec --no-startup-id $cripts/move-and-follow.sh $ws3
+bindsym $mod+Mod1+4 exec --no-startup-id $cripts/move-and-follow.sh $ws4
+bindsym $mod+Mod1+5 exec --no-startup-id $cripts/move-and-follow.sh $ws5
+bindsym $mod+Mod1+6 exec --no-startup-id $cripts/move-and-follow.sh $ws6
+bindsym $mod+Mod1+7 exec --no-startup-id $cripts/move-and-follow.sh 7
+bindsym $mod+Mod1+8 exec --no-startup-id $cripts/move-and-follow.sh 8
+bindsym $mod+Mod1+9 exec --no-startup-id $cripts/move-and-follow.sh 9
+bindsym $mod+Mod1+0 exec --no-startup-id $cripts/move-and-follow.sh $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
