@@ -7,12 +7,13 @@ internal_display_name="eDP1"
 internal_display_symbol=
 external_display_symbol=
 
+
 output=""
 for display in $connected_displays ; do
-    if [[ $display == $internal_display ]] ; then
-        output="$output $internal_display_symbol  $display"
+    if [[ "$display" == "$internal_display_name" ]] ; then
+        output="$output   $internal_display_symbol  $display"
     else
-        output="$output $external_display_symbol  $display"
+        output="$output   $external_display_symbol  $display"
     fi
 done
 echo "$output"
