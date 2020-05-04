@@ -48,6 +48,7 @@ Key binding | Function
 <kbd>Super</kbd><kbd>v</kbd>                                    | Next tile split is vertical
 <kbd>Super</kbd><kbd>h</kbd>                                    | Next tile split is horizontal
 <kbd>Super</kbd><kbd>r</kbd>                                    | Activate resize mode
+<kbd>Super</kbd><kbd>m</kbd>                                    | Activate floating window move mode
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>s</kbd>                     | Flameshot: take screenshot
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>c</kbd>                     | Calendar popup
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>l</kbd>                     | Lock desktop
