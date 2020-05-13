@@ -8,7 +8,8 @@ wallpaper() {
 
 internal=eDP1
 dp1=DP1-1
-dp2=HDMI1
+dp2=DP1-2
+dp3=HDMI1
 
 mode=$1
 
@@ -16,8 +17,8 @@ mode=$1
 menu() {
     local itemfile=~/.config/i3/displayswitch-items.txt
     echo "1-Internal only" >$itemfile
-    echo "2-Both" >>$itemfile
-    echo "3-External only" >>$itemfile
+    echo "2-All" >>$itemfile
+    echo "3-Externals only" >>$itemfile
     echo "4-Projection left" >>$itemfile
     echo "5-Projection right" >>$itemfile
     mode=`cat $itemfile | dmenu -i -b | head -c 1`
@@ -38,6 +39,8 @@ case $mode in
     sleep 1
     echo "$dp2 off"
     xrandr --output $dp2 --off
+    echo "$dp2 off"
+    xrandr --output $dp3 --off
     wallpaper
     ;;
   2)
@@ -48,6 +51,9 @@ case $mode in
     echo "$dp1 on"
     xrandr --output $dp1 --auto --primary
     sleep 1
+    echo "$dp2 on"
+    xrandr --output $dp2 --auto --right-of $dp1
+    sleep 1
     echo "Internal on"
     xrandr --output $internal --auto --left-of $dp1
     wallpaper
@@ -55,6 +61,9 @@ case $mode in
   3)
     echo "$dp1 on"
     xrandr --output $dp1 --auto --primary
+    sleep 1
+    echo "$dp2 on"
+    xrandr --output $dp2 --auto --right-of $dp1
     sleep 1
     echo "Internal off"
     xrandr --output $internal --off
@@ -64,26 +73,26 @@ case $mode in
     echo "Internal off"
     xrandr --output $internal --off
     sleep 1
-    echo "$dp2 on"
-    xrandr --output $dp2 --auto
+    echo "$dp3 on"
+    xrandr --output $dp3 --auto
     sleep 1
     echo "Internal on"
     xrandr --output $internal --auto
     sleep 1
-    xrandr --output $internal --primary --right-of $dp2
+    xrandr --output $internal --primary --right-of $dp3
     wallpaper
     ;;
   5)
     echo "Internal off"
     xrandr --output $internal --off
     sleep 1
-    echo "$dp2 on"
-    xrandr --output $dp2 --auto
+    echo "$dp3 on"
+    xrandr --output $dp3 --auto
     sleep 1
     echo "Internal on"
     xrandr --output $internal --auto
     sleep 1
-    xrandr --output $internal --primary --left-of $dp2
+    xrandr --output $internal --primary --left-of $dp3
     wallpaper
     ;;
 esac
