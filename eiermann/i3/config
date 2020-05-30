@@ -322,9 +322,10 @@ for_window [class="Pavucontrol"] floating enable, resize set 640 800, move posit
 for_window [class="Gnome-calendar"] floating enable
 for_window [title="gedit"] floating enable, resize set 640 800, move position center
 
-# Thunderbird + Skype
+# Thunderbird + Skype + Slack
 assign [class="Thunderbird"] $ws2
 assign [class="Skype"] $ws2
+assign [class="Slack"] $ws2
 
 # Firefox
 assign [class="Firefox"] $ws3

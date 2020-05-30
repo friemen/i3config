@@ -93,10 +93,10 @@ case $app in
 	firefox &
 	;;
     Skype)
-	focus_or_start Skype skype
+	focus_or_start Skype skypeforlinux
 	;;
     Slack)
-	focus_or_start_browser "Slack" https://doctronic.slack.com
+	slack &
 	;;
     System...)
 	~/.config/i3/syscommand.sh &
