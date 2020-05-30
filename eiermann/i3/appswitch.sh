@@ -83,7 +83,7 @@ case $app in
 	focus_or_start krusader krusader
 	;;
     Mixxx)
-	focus_or_start Mixxx ~/bin/music-dj.sh &
+	focus_or_start Mixxx ~/bin/music-dj.sh
 	;;
     Nexus)
 	focus_or_start_browser "Nexus" http://nexus.doctronic.de:8080/nexus
@@ -96,7 +96,7 @@ case $app in
 	focus_or_start Skype skypeforlinux
 	;;
     Slack)
-	slack &
+	focus_or_start Slack slack
 	;;
     System...)
 	~/.config/i3/syscommand.sh &
@@ -114,7 +114,7 @@ case $app in
 	focus_or_start_browser "whereby.com" https://doctronic.whereby.com
 	;;
     WindowsVM)
-	virtualbox --startvm doctronic &
+	VBoxManage startvm doctronic &
 	i3-msg workspace "10: "
 	;;
 esac
