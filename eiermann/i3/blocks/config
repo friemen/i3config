@@ -7,7 +7,7 @@ label=
 color=#00FF00
 
 [wifi]
-command=$cripts/wifi.sh wlo1
+command=$cripts/wifi.sh wlp59s0
 label=
 
 [cpu]

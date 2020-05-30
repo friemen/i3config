@@ -219,7 +219,7 @@ client.background       #FFFFFF
 # My additional settings
 
 # Desktop env feature checklist
-# - Display brightness control
+# - Display brightness control --> xrandr
 # - Screen lock
 # - Support for multiple monitors --> xrandr
 # - Display of notifications
@@ -229,24 +229,24 @@ client.background       #FFFFFF
 # - Keyboard speed
 # - Play music using Clementine
 # - Volume control via keyboard
-# - Trackpad natural scrolling
-# - Nightlight
-# - Cycling through keyboard layouts
-# - Keyboard light toggle --> just works with Fn+Space
+# - Trackpad natural scrolling and tapping
+# - Nightlight/Daylight --> xrandr
+# - Cycling through keyboard layouts --> setxkbmap, xmodmap
+# - Keyboard light toggle --> just works with Fn+F10
 # - TODO Automatic lock on suspend
 # - TODO Authentication integration (PolicyKit)
 
 # Extras to install on Ubuntu 18.04
-# sudo apt install compton i3blocks feh pavucontrol clementine xbacklight fonts-font-awesome udiskie redshift flameshot htop
+# sudo apt install compton i3blocks feh pavucontrol clementine fonts-font-awesome udiskie flameshot htop
 
 # SSH-Agent needs to be started
 exec_always $cripts/gnome-keyring.sh
 
+# fix resolution and primary setting
+exec --no-startup-id xrandr --output eDP-1-1 --mode 1920x1080 --primary --brightness 0.7
+
 # Transparency
 exec --no-startup-id killall compton ; compton -Gf -b --vsync opengl
-
-# Redshift with lat-lon coords of Bonn, Germany
-exec --no-startup-id redshift -l 50.73438:7.09549
 
 # Background wallpaper display
 exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
@@ -258,10 +258,12 @@ bindsym $mod+Ctrl+l exec --no-startup-id $cripts/lock.sh
 bindsym $mod+F9 exec --no-startup-id $cripts/cycle-kbd-layout.sh
 
 # Setup keyboard layout on restart
-exec --no-startup-id $cripts/setup-kbd.sh "de(nodeadkeys)"
+exec --no-startup-id $cripts/setup-kbd.sh "us(altgr-intl)"
 
 # Trackpad Natural Scrolling
-exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
+exec --no-startup-id xinput set-prop 'SYNA2393:00 06CB:7A13 Touchpad' 'libinput Natural Scrolling Enabled' 1
+exec --no-startup-id xinput set-prop 'SYNA2393:00 06CB:7A13 Touchpad' 'libinput Accel Speed' .8
+exec --no-startup-id xinput set-prop 'SYNA2393:00 06CB:7A13 Touchpad' 'libinput Tapping Enabled' 1
 
 # Automount USB devices
 exec --no-startup-id udiskie -ans &
@@ -290,16 +292,8 @@ bindcode $mod+191 exec --no-startup-id notify-send -t 2000 "Numpads are off"
 bindcode $mod+192 exec --no-startup-id notify-send -t 2000 "Numpads are on"
 
 # Screen brightness controls
-# Make sure /etc/X11/xorg.conf exists with contents:
-#
-# Section "Device"
-#         Identifier  "Intel Graphics"
-#         Driver      "intel"
-#         Option      "Backlight"  "intel_backlight"
-# EndSection
-#
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec $cripts/backlight.sh + .1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec $cripts/backlight.sh - .1 # decrease screen brightness
 
 bindsym $mod+z move workspace to output right
 bindsym $mod+x exec --no-startup-id $cripts/appswitch.sh

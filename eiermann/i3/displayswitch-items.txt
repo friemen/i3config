@@ -3,3 +3,5 @@
 3-Externals only
 4-Projection left
 5-Projection right
+Nightlight
+Daylight
