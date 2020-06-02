@@ -10,7 +10,7 @@ cripts="$( cd "$( dirname "$0" )" && pwd )"
 internal=eDP-1-1
 dp1=DP-1-1-1
 dp2=DP-1-1-2
-dp3=HDMI1
+dp3=DP-1-3
 
 mode=$1
 
@@ -52,10 +52,10 @@ case $mode in
         xrandr --output $internal --off
         sleep 1
         echo "$dp1 on"
-        xrandr --output $dp1 --auto --primary
+        xrandr --output $dp1 --auto --primary --brightness 1.0
         sleep 1
         echo "$dp2 on"
-        xrandr --output $dp2 --auto --right-of $dp1
+        xrandr --output $dp2 --auto --right-of $dp1 --brightness 1.0
         sleep 1
         echo "Internal on"
         xrandr --output $internal --auto --left-of $dp1 --mode 1920x1080
