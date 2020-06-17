@@ -3,14 +3,8 @@
 ## Usage
 
 [i3wm](https://i3wm.org/) is a window manager, not a complete desktop
-environment. Therefore one has to install not only i3 but in addition
-some more packages that are required to make everything work in my i3
-config:
-
-```
-sudo apt install i3 i3blocks compton feh pavucontrol clementine \
-xbacklight fonts-font-awesome udiskie htop flameshot redshift
-```
+environment. Therefore one has to install not only i3 but additional packages.
+These are documented as part of the i3/config file.
 
 Clone this repo, then create a link in your ~/.config folder like so:
 
@@ -56,6 +50,7 @@ Key binding | Function
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>e</kbd>                    | Exit i3
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>c</kbd>                    | Reload i3 config
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>r</kbd>                    | Restart i3
+<kbd>Super</kbd><kbd>Escape</kbd>                               | Suspend
 <kbd>Super</kbd><kbd>F9</kbd>                                   | Switch keyboard layout
 <kbd>Super</kbd><kbd>F10</kbd>                                  | Clementine: show playing track info
 <kbd>Super</kbd><kbd>F11</kbd>                                  | Clementine: start/pause track

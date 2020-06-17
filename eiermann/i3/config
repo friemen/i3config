@@ -1,13 +1,39 @@
-# i3 config file (v4)
+# i3 config file
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+##############################################################################
+# Packages to install on Ubuntu 20.04
+# sudo apt install i3 i3blocks compton feh pavucontrol clementine fonts-font-awesome udiskie flameshot blueman htop inputplug
+
+##############################################################################
+# Desktop env feature checklist
+# - Display brightness control --> xrandr
+# - Support for multiple monitors --> xrandr
+# - Display of notifications
+# - Screen lock
+# - Switch from/to external soundcard --> pavucontrol
+# - Automount of USB devices --> udiskie
+# - Network device+connection control --> nmcli + nm-applet
+# - Bluetooth control --> blueman
+# - Keyboard speed, US layout
+# - Play music using Clementine
+# - Volume control via keyboard
+# - Trackpad natural scrolling and tapping
+# - Nightlight/Daylight --> xrandr
+# - Cycling through keyboard layouts --> setxkbmap, xmodmap
+# - Keyboard light toggle --> just works with Fn+F10
+# - Auto keyboard layout change on plugging keyboard in or out --> inputplug
+# - TODO Suspend on lid close
+# - TODO Automatic lock on suspend
+# - TODO Authentication integration (PolicyKit)
+
+
+# Super key is Mod4, Alt_L is Mod1
 set $mod     Mod4
 set $normal  #4A8986
 set $urgent  #2F343A
 set $cripts  ~/.config/i3
-
-# Mod1 aka Alt_L
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -215,30 +241,6 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
 
 
-##############################################################################
-# My additional settings
-
-# Desktop env feature checklist
-# - Display brightness control --> xrandr
-# - Screen lock
-# - Support for multiple monitors --> xrandr
-# - Display of notifications
-# - Switch from/to external soundcard --> pavucontrol
-# - Automount of USB devices --> udiskie
-# - Network device+connection control --> nmcli + nm-applet
-# - Keyboard speed
-# - Play music using Clementine
-# - Volume control via keyboard
-# - Trackpad natural scrolling and tapping
-# - Nightlight/Daylight --> xrandr
-# - Cycling through keyboard layouts --> setxkbmap, xmodmap
-# - Keyboard light toggle --> just works with Fn+F10
-# - TODO Automatic lock on suspend
-# - TODO Authentication integration (PolicyKit)
-
-# Extras to install on Ubuntu 18.04
-# sudo apt install compton i3blocks feh pavucontrol clementine fonts-font-awesome udiskie flameshot htop
-
 # SSH-Agent needs to be started
 exec_always $cripts/gnome-keyring.sh
 
@@ -254,18 +256,24 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
 # Screen lock
 bindsym $mod+Ctrl+l exec --no-startup-id $cripts/lock.sh
 
+# Suspend
+bindsym $mod+Escape exec --no-startup-id $cripts/lock.sh && systemctl suspend
+
 # Cycling through keyboard layouts
 bindsym $mod+F9 exec --no-startup-id $cripts/cycle-kbd-layout.sh
 
 # Setup keyboard layout on restart
-exec --no-startup-id $cripts/setup-kbd.sh "us(altgr-intl)"
+exec --no-startup-id $cripts/setup-kbd.sh "de(nodeadkeys)"
 
-# Trackpad Natural Scrolling
+# React on plugging in/out keyboards
+exec --no-startup-id inputplug -0 -c $cripts/on-inputplug.sh
+
+# Trackpad: natural scrolling, speed, tap support
 exec --no-startup-id xinput set-prop 'SYNA2393:00 06CB:7A13 Touchpad' 'libinput Natural Scrolling Enabled' 1
 exec --no-startup-id xinput set-prop 'SYNA2393:00 06CB:7A13 Touchpad' 'libinput Accel Speed' .8
 exec --no-startup-id xinput set-prop 'SYNA2393:00 06CB:7A13 Touchpad' 'libinput Tapping Enabled' 1
 
-# Automount USB devices
+# automount USB devices
 exec --no-startup-id udiskie -ans &
 
 # Screenshot tool
@@ -273,6 +281,9 @@ exec --no-startup-id flameshot &
 
 # Network-Manager applet
 exec --no-startup-id nm-applet &
+
+# Bluetooth-Manager applet
+exec --no-startup-id blueman-applet &
 
 # Pulse Audio controls
 # increase sound volume
@@ -287,7 +298,7 @@ bindsym $mod+F10 exec --no-startup-id clementine --toggle-pretty-osd
 bindsym $mod+F11 exec --no-startup-id clementine --play-pause
 bindsym $mod+F12 exec --no-startup-id clementine --next
 
-# Special codes that V60 keyboard sends on layer changes
+# special codes that V60 keyboard sends on layer changes
 bindcode $mod+191 exec --no-startup-id notify-send -t 2000 "Numpads are off"
 bindcode $mod+192 exec --no-startup-id notify-send -t 2000 "Numpads are on"
 
@@ -295,7 +306,10 @@ bindcode $mod+192 exec --no-startup-id notify-send -t 2000 "Numpads are on"
 bindsym XF86MonBrightnessUp exec $cripts/backlight.sh + .1 # increase screen brightness
 bindsym XF86MonBrightnessDown exec $cripts/backlight.sh - .1 # decrease screen brightness
 
+# move workspace between outputs
 bindsym $mod+z move workspace to output right
+
+# special program launcher
 bindsym $mod+x exec --no-startup-id $cripts/appswitch.sh
 
 # Open htop in floating terminal window
