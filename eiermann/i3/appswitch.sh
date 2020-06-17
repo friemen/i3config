@@ -59,7 +59,7 @@ case $app in
 	focus_or_start_browser "dtms" https://dtms.doctronic.de/ui#timelogging
 	;;
     Emacs)
-	focus_or_start Emacs emacs
+	XMODIFIERS=@im=none focus_or_start Emacs emacs
 	;;
     Firefox)
         i3-msg workspace "3: "
