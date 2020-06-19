@@ -299,8 +299,8 @@ bindsym $mod+F11 exec --no-startup-id clementine --play-pause
 bindsym $mod+F12 exec --no-startup-id clementine --next
 
 # special codes that V60 keyboard sends on layer changes
-bindcode $mod+191 exec --no-startup-id notify-send -t 2000 "Numpads are off"
-bindcode $mod+192 exec --no-startup-id notify-send -t 2000 "Numpads are on"
+bindcode $mod+191 exec --no-startup-id notify-send -t 2000 "Caps are off"
+bindcode $mod+192 exec --no-startup-id notify-send -t 2000 "Caps are on"
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec $cripts/backlight.sh + .1 # increase screen brightness
