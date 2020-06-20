@@ -327,6 +327,9 @@ bindsym $mod+Ctrl+s exec --no-startup-id flameshot gui
 # Default title format
 for_window [class=".*"] title_format "  %title"
 
+# Cheatsheets
+bindsym $mod+slash exec --no-startup-id $cripts/cheatsheets.sh
+
 # Specific window settings
 # find classnames by starting xprop and clicking the desired window
 for_window [window_role="task_dialog|app|bubble|pop-up|page-info|Preferences"] floating enable
@@ -336,6 +339,7 @@ for_window [class="Pavucontrol"] floating enable, resize set 640 800, move posit
 for_window [class="Arandr"] floating enable, resize set 800 400, move position center
 for_window [class="Gnome-calendar"] floating enable
 for_window [title="gedit"] floating enable, resize set 640 800, move position center
+for_window [class="cheatsheet"] fullscreen
 
 # Thunderbird + Skype + Slack
 assign [class="Thunderbird"] $ws2
