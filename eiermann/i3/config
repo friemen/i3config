@@ -340,6 +340,7 @@ for_window [class="Arandr"] floating enable, resize set 800 400, move position c
 for_window [class="Gnome-calendar"] floating enable
 for_window [title="gedit"] floating enable, resize set 640 800, move position center
 for_window [class="cheatsheet"] fullscreen
+for_window [class="Eog"] floating enable, resize set 800 800, move position center
 
 # Thunderbird + Skype + Slack
 assign [class="Thunderbird"] $ws2
