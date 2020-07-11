@@ -62,7 +62,7 @@ case $app in
 	XMODIFIERS=@im=none focus_or_start Emacs emacs
 	;;
     Firefox)
-        i3-msg workspace "3: "
+	focus_or_start_browser "Firefox" https://www.google.de
 	;;
     Gerrit)
 	focus_or_start_browser "gerrit" http://gerrit.doctronic.de/login/%23%2Fq%2Fstatus%3Aopen
