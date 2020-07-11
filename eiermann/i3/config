@@ -257,7 +257,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
 bindsym $mod+Ctrl+l exec --no-startup-id $cripts/lock.sh
 
 # Suspend
-bindsym $mod+Escape exec --no-startup-id $cripts/lock.sh && systemctl suspend
+bindsym $mod+Ctrl+Escape exec --no-startup-id $cripts/lock.sh && systemctl suspend
 
 # Cycling through keyboard layouts
 bindsym $mod+F9 exec --no-startup-id $cripts/cycle-kbd-layout.sh

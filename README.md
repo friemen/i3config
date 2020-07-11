@@ -47,10 +47,10 @@ Key binding | Function
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>c</kbd>                     | Calendar popup
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>l</kbd>                     | Lock desktop
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>p</kbd>                     | Processes in Htop
+<kbd>Super</kbd><kbd>Ctrl</kbd><kbd>Escape</kbd>                | Suspend system
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>e</kbd>                    | Exit i3
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>c</kbd>                    | Reload i3 config
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>r</kbd>                    | Restart i3
-<kbd>Super</kbd><kbd>Escape</kbd>                               | Suspend
 <kbd>Super</kbd><kbd>/</kbd>                                    | Display cheatsheet
 <kbd>Super</kbd><kbd>F9</kbd>                                   | Switch keyboard layout
 <kbd>Super</kbd><kbd>F10</kbd>                                  | Clementine: show playing track info
