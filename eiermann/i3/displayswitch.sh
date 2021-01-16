@@ -8,10 +8,10 @@ wallpaper() {
 cripts="$( cd "$( dirname "$0" )" && pwd )"
 
 internal=eDP-1-1
-dp1=DP-1-1
-dp2=DP-1-2
-# dp3=DP-3
-dp3=DP-1-3
+dp1=DP-1-1-1
+dp2=DP-1-1-2
+# dp3=DP-3-1
+dp3=DP-1-1-3
 mode=$1
 
 
