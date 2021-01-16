@@ -77,7 +77,7 @@ case $app in
 	focus_or_start_browser "JIRA" https://jira.doctronic.de/
 	;;
     Keepass)
-	~/bin/kundenserver.sh &
+	~/bin/dt-keepass.sh &
 	;;
     Krusader)
 	focus_or_start krusader krusader
