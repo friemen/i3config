@@ -335,10 +335,11 @@ bindsym $mod+slash exec --no-startup-id $cripts/cheatsheets.sh
 for_window [window_role="task_dialog|app|bubble|pop-up|page-info|Preferences"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="KeePass2"] floating enable
+for_window [class="keepassxc"] floating enable
 for_window [class="Pavucontrol"] floating enable, resize set 640 800, move position center
 for_window [class="Arandr"] floating enable, resize set 800 400, move position center
 for_window [class="Gnome-calendar"] floating enable
-for_window [title="gedit"] floating enable, resize set 640 800, move position center
+for_window [title="gedit"] floating enable, resize set 600 400, move position 1320 680
 for_window [class="cheatsheet"] fullscreen
 for_window [class="Eog"] floating enable, resize set 800 800, move position center
 

@@ -296,7 +296,9 @@ for_window [class=".*"] title_format "  %title"
 # (you can find classnames by starting xprop and clicking the desired window)
 for_window [class="Gnome-calculator"] floating enable border pixel 6
 for_window [class="Pavucontrol"] floating enable, resize set 640 480, move position center
-for_window [title="gedit"] floating enable, resize set 640 800, move position center
+for_window [class="KeePass2"] floating enable
+for_window [class="keepassxc"] floating enable
+for_window [title="gedit"] floating enable, resize set 640 400, move position 1320 680
 
 # Thunderbird + Skype
 assign [class="Thunderbird"] $ws2
