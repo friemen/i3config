@@ -350,7 +350,7 @@ assign [class="Slack"] $ws2
 
 # Firefox
 assign [class="Firefox"] $ws3
-for_window [class="Firefox"] workspace $ws3
+for_window [class="Firefox"] workspace $ws3, move to workspace $ws3
 
 # Emacs
 assign [class="Emacs"] $ws4
@@ -359,6 +359,8 @@ assign [class="Emacs"] $ws4
 assign [class="cantata"] $ws5
 assign [class="Mixxx"] $ws5
 assign [class="Clementine"] $ws5
+for_window [class="Clementine"] workspace $ws5, move to workspace $ws5
+
 
 # Krusader
 assign [class="krusader"] $ws6
