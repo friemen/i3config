@@ -299,6 +299,7 @@ for_window [class="Pavucontrol"] floating enable, resize set 640 480, move posit
 for_window [class="KeePass2"] floating enable
 for_window [class="keepassxc"] floating enable
 for_window [title="gedit"] floating enable, resize set 640 400, move position 1320 680
+for_window [class="vlc"] floating enable
 
 # Thunderbird + Skype
 assign [class="Thunderbird"] $ws2
@@ -311,10 +312,13 @@ assign [class="Firefox"] $ws3
 assign [class="Emacs"] $ws4
 for_window [class="Emacs"] workspace $ws4
 
-# Music
+# Music/Media
 assign [class="cantata"] $ws5
+for_window [class="cantata"] workspace $ws5, move to workspace $ws5
 assign [class="Mixxx"] $ws5
+for_window [class="Mixxx"] workspace $ws5, move to workspace $ws5
 assign [class="Clementine"] $ws5
+for_window [class="Clementine"] workspace $ws5, move to workspace $ws5
 
 # Krusader
 assign [class="krusader"] $ws6

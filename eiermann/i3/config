@@ -342,6 +342,7 @@ for_window [class="Gnome-calendar"] floating enable
 for_window [title="gedit"] floating enable, resize set 600 400, move position 1320 680
 for_window [class="cheatsheet"] fullscreen
 for_window [class="Eog"] floating enable, resize set 800 800, move position center
+for_window [class="vlc"] floating enable
 
 # Thunderbird + Skype + Slack
 assign [class="Thunderbird"] $ws2
@@ -355,9 +356,11 @@ for_window [class="Firefox"] workspace $ws3, move to workspace $ws3
 # Emacs
 assign [class="Emacs"] $ws4
 
-# Music
+# Music/Media
 assign [class="cantata"] $ws5
+for_window [class="cantata"] workspace $ws5, move to workspace $ws5
 assign [class="Mixxx"] $ws5
+for_window [class="Mixxx"] workspace $ws5, move to workspace $ws5
 assign [class="Clementine"] $ws5
 for_window [class="Clementine"] workspace $ws5, move to workspace $ws5
 
