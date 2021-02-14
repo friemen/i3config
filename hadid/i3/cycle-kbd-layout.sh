@@ -13,7 +13,6 @@ fi
 if [[ "$current_layout" == "$us" ]]; then
     next_layout="$de"
 fi
-notify-send -t 2000 "Switching keyboard layout: $next_layout"
 
 cripts="$( cd "$( dirname "$0" )" && pwd )"
 $cripts/setup-kbd.sh "$next_layout"

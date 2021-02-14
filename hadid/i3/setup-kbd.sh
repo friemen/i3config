@@ -3,7 +3,9 @@
 layout="$1"
 cripts="$( cd "$( dirname "$0" )" && pwd )"
 
-setxkbmap -layout "$layout" -option "compose:caps"
+notify-send -t 2000 "Switching keyboard layout: $layout"
+
+setxkbmap -layout "$layout"  -option -option "compose:paus" -option "caps:capslock"
 xmodmap -pke > /tmp/i3-xmodmap-last
 xmodmap $cripts/xmodmaprc
 xmodmap -pke > /tmp/i3-xmodmap-current

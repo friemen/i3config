@@ -258,9 +258,9 @@ bindsym $mod+F10 exec --no-startup-id clementine --toggle-pretty-osd
 bindsym $mod+F11 exec --no-startup-id clementine --play-pause
 bindsym $mod+F12 exec --no-startup-id clementine --next
 
-# Special codes that V60 keyboard sends on layer changes
-bindcode $mod+191 exec --no-startup-id notify-send -t 2000 "Numpads are off"
-bindcode $mod+192 exec --no-startup-id notify-send -t 2000 "Numpads are on"
+# Special codes that QMK keyboard sends on layer changes
+#bindcode $mod+191 exec --no-startup-id notify-send -t 2000 "Numpads are off"
+#bindcode $mod+192 exec --no-startup-id notify-send -t 2000 "Numpads are on"
 
 # Screen brightness controls
 # Make sure /etc/X11/xorg.conf exists with contents:
