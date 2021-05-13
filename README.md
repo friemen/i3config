@@ -60,19 +60,9 @@ Key binding | Function
 
 ## Other keybindings (setxkbmap, xmodmap)
 
-<kbd>Caps lock</kbd>                                            | Compose key
-<kbd>Super</kbd><kbd>n</kbd>                                    | Home
-<kbd>Super</kbd><kbd>m</kbd>                                    | End
-<kbd>Super</kbd><kbd>o</kbd>                                    | Page Up
-<kbd>Super</kbd><kbd>p</kbd>                                    | Page Down
-<kbd>Super</kbd><kbd>i</kbd>                                    | Up
-<kbd>Super</kbd><kbd>j</kbd>                                    | Left
-<kbd>Super</kbd><kbd>k</kbd>                                    | Down
-<kbd>Super</kbd><kbd>l</kbd>                                    | Right
-<kbd>Super</kbd><kbd>v</kbd>                                    | Insert
-<kbd>Super</kbd><kbd>d</kbd>                                    | Delete
+<kbd>Scroll lock</kbd>                                          | Compose key
 
-## Ideas / Todos
+## Ideas / Improvements
 
 - Document shortcuts as keyboad editor layouts
 - Write/read tempfiles to/from a /tmp/i3-user folder
