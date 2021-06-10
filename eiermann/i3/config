@@ -4,7 +4,7 @@
 
 ##############################################################################
 # Packages to install on Ubuntu 20.04
-# sudo apt install i3 i3blocks compton feh pavucontrol clementine fonts-font-awesome udiskie flameshot blueman htop inputplug
+# sudo apt install i3 i3blocks compton feh pavucontrol clementine fonts-font-awesome udiskie flameshot blueman htop inputplug birdtray
 
 ##############################################################################
 # Desktop env feature checklist
@@ -281,6 +281,9 @@ exec --no-startup-id flameshot &
 
 # Network-Manager applet
 exec --no-startup-id nm-applet &
+
+# Thunderbird applet
+exec --no-startup-id birdtray &
 
 # Bluetooth-Manager applet
 exec --no-startup-id blueman-applet &
