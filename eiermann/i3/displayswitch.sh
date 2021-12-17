@@ -10,15 +10,14 @@ cripts="$( cd "$( dirname "$0" )" && pwd )"
 internal=eDP-1-1
 dp1=DP-1-1-1
 dp2=DP-1-1-2
-# dp3=DP-3-1
-dp3=DP-1-1-3
+dp3=DP-1-3
 mode=$1
 
 
 menu() {
     local itemfile=~/.config/i3/displayswitch-items.txt
     echo "1-Internal only" >$itemfile
-    echo "2-All" >>$itemfile
+    echo "2-Office" >>$itemfile
     echo "3-Externals only" >>$itemfile
     echo "4-Projection left" >>$itemfile
     echo "5-Projection right" >>$itemfile
@@ -42,7 +41,7 @@ case $mode in
         sleep 1
         echo "$dp2 off"
         xrandr --output $dp2 --off
-        echo "$dp2 off"
+        echo "$dp3 off"
         xrandr --output $dp3 --off
         wallpaper
         ;;
@@ -78,6 +77,7 @@ case $mode in
         sleep 1
         echo "$dp3 on"
         xrandr --output $dp3 --auto
+        xrandr --output $dp3 --brightness 0.8
         sleep 1
         echo "Internal on"
         xrandr --output $internal --auto --mode 1920x1080
@@ -91,6 +91,7 @@ case $mode in
         sleep 1
         echo "$dp3 on"
         xrandr --output $dp3 --auto
+        xrandr --output $dp3 --brightness 0.8
         sleep 1
         echo "Internal on"
         xrandr --output $internal --auto --mode 1920x1080
