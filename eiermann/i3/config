@@ -4,7 +4,7 @@
 
 ##############################################################################
 # Packages to install on Ubuntu 20.04
-# sudo apt install i3 i3blocks compton feh pavucontrol clementine fonts-font-awesome udiskie flameshot blueman htop inputplug birdtray
+# sudo apt install i3 i3blocks compton feh pavucontrol clementine fonts-font-awesome udiskie flameshot blueman htop inputplug birdtray imagemagick
 
 ##############################################################################
 # Desktop env feature checklist
@@ -240,7 +240,6 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 client.background       #FFFFFF
 
-
 # SSH-Agent needs to be started
 exec_always $cripts/gnome-keyring.sh
 
@@ -332,6 +331,7 @@ for_window [class=".*"] title_format "  %title"
 
 # Cheatsheets
 bindsym $mod+slash exec --no-startup-id $cripts/cheatsheets.sh
+bindsym $mod+c exec --no-startup-id $cripts/cheatsheets.sh
 
 # Specific window settings
 # find classnames by starting xprop and clicking the desired window
@@ -341,11 +341,13 @@ for_window [class="KeePass2"] floating enable
 for_window [class="keepassxc"] floating enable
 for_window [class="Pavucontrol"] floating enable, resize set 640 800, move position center
 for_window [class="Arandr"] floating enable, resize set 800 400, move position center
+for_window [class="gpick"] floating enable, resize set 600 400
 for_window [class="Gnome-calendar"] floating enable
 for_window [title="gedit"] floating enable, resize set 600 400, move position 1320 680
 for_window [class="cheatsheet"] fullscreen
 for_window [class="Eog"] floating enable, resize set 800 800, move position center
 for_window [class="vlc"] floating enable
+for_window [title="Zoiper5"] floating enable, resize set 400 800, move position center
 
 # Thunderbird + Skype + Slack
 assign [class="Thunderbird"] $ws2
@@ -367,9 +369,11 @@ for_window [class="Mixxx"] workspace $ws5, move to workspace $ws5
 assign [class="Clementine"] $ws5
 for_window [class="Clementine"] workspace $ws5, move to workspace $ws5
 
-
 # Krusader
 assign [class="krusader"] $ws6
 
 # Windows VM
 assign [class="VirtualBox" title="doctronic"] $ws10
+
+# Zoiper5
+assign [title="Zoiper5"] $ws2
