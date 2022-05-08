@@ -207,13 +207,13 @@ mode "move" {
 
 bindsym $mod+m mode "move" focus floating
 
-
 ##############################################################################
 # gaps config
 # see https://github.com/Airblader/i3/blob/gaps-next/README.md
 
 gaps inner 8
-for_window [class="^.*"] border pixel 0
+for_window [tiling] border pixel 0
+for_window [floating] border normal
 
 ##############################################################################
 bar {
