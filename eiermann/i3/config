@@ -4,7 +4,7 @@
 
 ##############################################################################
 # Packages to install on Ubuntu 20.04
-# sudo apt install i3 i3blocks compton feh pavucontrol clementine fonts-font-awesome udiskie flameshot blueman htop inputplug birdtray imagemagick
+# sudo apt install i3blocks i3lock i3status suckless-tools compton feh pavucontrol clementine fonts-font-awesome udiskie flameshot blueman htop inputplug birdtray imagemagick ranger
 
 ##############################################################################
 # Desktop env feature checklist
@@ -330,6 +330,8 @@ for_window [title="Htop"] floating enable, resize set 1600 600, move position ce
 # Open calendar in floating terminal window
 bindsym $mod+Ctrl+c exec --no-startup-id gnome-terminal --title "3 months" -e $cripts/calendar.sh
 for_window [title="3 months"] floating enable, resize set 640 200
+
+bindsym $mod+Ctrl+r exec --no-startup-id gnome-terminal --title "Ranger" -e ranger
 
 # Open flameshot
 bindsym Print exec --no-startup-id flameshot gui

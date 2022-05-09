@@ -4,7 +4,7 @@
 
 [i3wm](https://i3wm.org/) is a window manager, not a complete desktop
 environment. Therefore one has to install not only i3 but additional packages.
-These are documented as part of the i3/config file.
+These are documented at the top of my i3/config file.
 
 Clone this repo, then create a link in your ~/.config folder like so:
 
@@ -12,11 +12,30 @@ Clone this repo, then create a link in your ~/.config folder like so:
 ln -s ~/Projects/i3config/hadid/i3 ~/.config/i3
 ```
 
+
+## i3-gaps
+
+i3-gaps is [a fork](https://github.com/Airblader/i3) of i3
+that allows the configuration of visual gaps between windows in tiling mode.
+
+Unlike i3 many official package stores do NOT include it. I built it
+myself following [the instructions](https://github.com/Airblader/i3/wiki/Building-from-source).
+
+After building it you need to ensure that:
+
+* default i3 is uninstalled.
+* the necessary i3-gaps executables are in your $PATH, i.e. make them available in `/usr/local/bin` like so:
+`sudo cp i3 i3bar i3-config-wizard i3-dump-log i3-input i3-msg i3-nagbar /usr/local/bin` and
+`cd .. && sudo cp i3-dmenu-desktop i3-sensible-terminal i3-sensible-editor i3-sensible-pager i3-save-tree /usr/local/bin`
+* suckless-tools, i3status, i3lock and i3blocks is installed: `sudo apt install i3blocks i3status i3lock suckless-tools`
+
+
 ## i3 specific keybindings
 
 Key binding | Function
 :--- | :---
 <kbd>Super</kbd><kbd>Enter</kbd>                                | Start terminal
+<kbd>Super</kbd><kbd>c</kbd>                                    | Dmenu cheatsheets
 <kbd>Super</kbd><kbd>d</kbd>                                    | Dmenu applications
 <kbd>Super</kbd><kbd>x</kbd>                                    | Dmenu special applications
 <kbd>Super</kbd><kbd>q</kbd>                                    | Kill selected window
@@ -47,11 +66,11 @@ Key binding | Function
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>c</kbd>                     | Calendar popup
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>l</kbd>                     | Lock desktop
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>p</kbd>                     | Processes in Htop
+<kbd>Super</kbd><kbd>Ctrl</kbd><kbd>r</kbd>                     | Ranger filemanager
 <kbd>Super</kbd><kbd>Ctrl</kbd><kbd>Escape</kbd>                | Suspend system
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>e</kbd>                    | Exit i3
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>c</kbd>                    | Reload i3 config
 <kbd>Super</kbd><kbd>Shift</kbd><kbd>r</kbd>                    | Restart i3
-<kbd>Super</kbd><kbd>/</kbd>                                    | Display cheatsheet
 <kbd>Super</kbd><kbd>F9</kbd>                                   | Switch keyboard layout
 <kbd>Super</kbd><kbd>F10</kbd>                                  | Clementine: show playing track info
 <kbd>Super</kbd><kbd>F11</kbd>                                  | Clementine: start/pause track
