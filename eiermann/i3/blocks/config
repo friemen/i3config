@@ -1,26 +1,36 @@
 interval=5
 color=#AFBFBF
 
+[windowtitle]
+command=$cripts/windowtitle.sh
+min_width=800
+align=center
+
 [battery]
 command=$cripts/battery.sh
 label=
+min_width=50
 color=#a3be8c
 
 [wifi]
 command=$cripts/wifi.sh wlp59s0
+min_width=50
 label=
 
 [cpu]
 command=$cripts/cpu_usage.sh
+min_width=50
 color=#bf616a
 label=
 
 [memory]
 command=$cripts/memory.sh
+min_width=50
 label=
 
 [diskfree]
 command=$cripts/diskfree.sh
+min_width=50
 label=
 
 [separator]
