@@ -4,7 +4,7 @@
 
 ##############################################################################
 # Packages to install on Ubuntu 20.04
-# sudo apt install i3blocks i3lock i3status suckless-tools compton feh pavucontrol clementine fonts-font-awesome udiskie flameshot blueman htop inputplug birdtray imagemagick ranger
+# sudo apt install i3blocks i3lock i3status suckless-tools compton feh pavucontrol mpv fonts-font-awesome udiskie flameshot blueman htop inputplug birdtray imagemagick ranger
 
 ##############################################################################
 # Desktop env feature checklist
@@ -17,7 +17,7 @@
 # - Network device+connection control --> nmcli + nm-applet
 # - Bluetooth control --> blueman
 # - Keyboard speed, US layout
-# - Play music using Clementine
+# - Play music using mpv
 # - Volume control via keyboard
 # - Trackpad natural scrolling and tapping
 # - Nightlight/Daylight --> xrandr
@@ -305,14 +305,12 @@ bindsym XF86AudioLowerVolume exec --no-startup-id $cripts/volctl.sh -5%
 # mute sound
 bindsym XF86AudioMute exec --no-startup-id  $cripts/volctl.sh mute
 
-# Music playback control based on Clementine
-bindsym $mod+F10 exec --no-startup-id clementine --toggle-pretty-osd
-bindsym $mod+F11 exec --no-startup-id clementine --play-pause
-bindsym $mod+F12 exec --no-startup-id clementine --next
-
-# special codes that QMK keyboard sends on layer changes
-#bindcode $mod+191 exec --no-startup-id notify-send -t 2000 "Caps are off"
-#bindcode $mod+192 exec --no-startup-id notify-send -t 2000 "Caps are on"
+# mpv audio controls
+bindsym XF86AudioPlay  exec echo cycle pause   | socat - ~/.config/mpv/socket
+bindsym XF86AudioPause exec echo cycle pause   | socat - ~/.config/mpv/socket
+bindsym XF86AudioStop  exec echo cycle pause   | socat - ~/.config/mpv/socket
+bindsym XF86AudioPrev  exec echo playlist_prev | socat - ~/.config/mpv/socket
+bindsym XF86AudioNext  exec echo playlist_next | socat - ~/.config/mpv/socket
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec $cripts/backlight.sh + .1 # increase screen brightness
