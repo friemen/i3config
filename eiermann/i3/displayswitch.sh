@@ -23,7 +23,7 @@ menu() {
     echo "5-Projection right" >>$itemfile
     echo "Nightlight" >>$itemfile
     echo "Daylight" >>$itemfile
-    mode=`cat $itemfile | dmenu -i -b | head -c 1`
+    mode=`cat $itemfile | dmenu -i -b -sb '#bf616a' | head -c 1`
 }
 
 

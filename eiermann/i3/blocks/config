@@ -4,7 +4,7 @@ color=#AFBFBF
 [battery]
 command=$cripts/battery.sh
 label=
-color=#00FF00
+color=#a3be8c
 
 [wifi]
 command=$cripts/wifi.sh wlp59s0
@@ -12,7 +12,7 @@ label=
 
 [cpu]
 command=$cripts/cpu_usage.sh
-color=#FF6060
+color=#bf616a
 label=
 
 [memory]
@@ -25,7 +25,7 @@ label=
 
 [separator]
 markup=pango
-full_text=<span foreground="#4A8986" size="large"></span>
+full_text=<span foreground="#81a1c1" size="large"></span>
 
 [displays]
 command=$cripts/displays.sh
@@ -43,7 +43,7 @@ command=$cripts/vpn.sh
 
 [separator]
 markup=pango
-full_text=<span foreground="#4A8986" size="large"></span>
+full_text=<span foreground="#81a1c1" size="large"></span>
 
 [weather]
 command=$cripts/weather.sh
@@ -58,4 +58,4 @@ label=
 
 [separator]
 markup=pango
-full_text=<span foreground="#4A8986" size="large">  </span>
+full_text=<span foreground="#81a1c1" size="large">  </span>

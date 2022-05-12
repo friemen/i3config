@@ -31,8 +31,9 @@
 
 # Super key is Mod4, Alt_L is Mod1
 set $mod     Mod4
-set $normal  #4A8986
-set $urgent  #2F343A
+set $black   #2e3440
+set $normal  #81a1c1
+set $urgent  #bf616a
 set $cripts  ~/.config/i3
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -224,14 +225,14 @@ bar {
     separator_symbol "   "
     status_command cripts=$cripts/blocks i3blocks -c $cripts/blocks/config
     colors {
-      background #000000
+      background $black
       statusline #FFFFFF
-      separator  #666666
+      separator  #3b4252
 
       # class            border  bground text
-      focused_workspace  #71A38F $normal #FFFFFF
-      active_workspace   #333333 #222222 #FFFFFF
-      inactive_workspace #333333 #222222 #888888
+      focused_workspace  #7DB0BF $normal #FFFFFF
+      active_workspace   #333333 $black  #FFFFFF
+      inactive_workspace #333333 $black  #888888
       urgent_workspace   $urgent #900000 #FFFFFF
       binding_mode       $urgent #900000 #FFFFFF
   }

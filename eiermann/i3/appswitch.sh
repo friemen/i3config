@@ -31,7 +31,7 @@ focus_or_start() {
 }
 
 
-app=`cat ~/.config/i3/appswitch-items.txt | dmenu -i -b -sb '#E65C39'`
+app=`cat ~/.config/i3/appswitch-items.txt | dmenu -i -b -sb '#bf616a'`
 
 case $app in
     Calculator)
