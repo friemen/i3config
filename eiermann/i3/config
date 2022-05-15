@@ -114,6 +114,7 @@ bindsym $mod+Shift+space focus mode_toggle
 ##############################################################################
 # Assign icons to workspaces
 # Font Awesome 4.7 icons as unicode characters
+# see https://fontawesome.com/v4/cheatsheet/
 
 # fa-terminal
 set $ws1 "1: "
@@ -226,13 +227,13 @@ bar {
     status_command cripts=$cripts/blocks i3blocks -c $cripts/blocks/config
     colors {
       background $black
-      statusline #FFFFFF
+      statusline #d8dee9
       separator  #3b4252
 
       # class            border  bground text
       focused_workspace  #7DB0BF $normal #FFFFFF
       active_workspace   #333333 $black  #FFFFFF
-      inactive_workspace #333333 $black  #888888
+      inactive_workspace #333333 $black  #d8dee9
       urgent_workspace   $urgent #900000 #FFFFFF
       binding_mode       $urgent #900000 #FFFFFF
   }
@@ -378,6 +379,10 @@ assign [class="Mixxx"] $ws5
 for_window [class="Mixxx"] workspace $ws5, move to workspace $ws5
 assign [class="Clementine"] $ws5
 for_window [class="Clementine"] workspace $ws5, move to workspace $ws5
+# assign [class="mpv"] $ws5
+# for_window [class="mpv"] move to workspace $ws5
+# assign [title="mpv-terminal"] $ws5
+# for_window [title="mpv-terminal"] move to workspace $ws5
 
 # Krusader
 assign [class="krusader"] $ws6
