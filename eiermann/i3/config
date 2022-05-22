@@ -307,11 +307,12 @@ bindsym XF86AudioLowerVolume exec --no-startup-id $cripts/volctl.sh -5%
 bindsym XF86AudioMute exec --no-startup-id  $cripts/volctl.sh mute
 
 # mpv audio controls
-bindsym XF86AudioPlay  exec echo cycle pause   | socat - ~/.config/mpv/socket
-bindsym XF86AudioPause exec echo cycle pause   | socat - ~/.config/mpv/socket
-bindsym XF86AudioStop  exec echo cycle pause   | socat - ~/.config/mpv/socket
-bindsym XF86AudioPrev  exec echo playlist_prev | socat - ~/.config/mpv/socket
-bindsym XF86AudioNext  exec echo playlist_next | socat - ~/.config/mpv/socket
+bindsym XF86AudioPlay  exec $cripts/playctl.sh play
+bindsym XF86AudioPause exec $cripts/playctl.sh pause
+bindsym XF86AudioStop  exec $cripts/playctl.sh stop
+bindsym XF86AudioPrev  exec $cripts/playctl.sh prev
+bindsym XF86AudioNext  exec $cripts/playctl.sh next
+
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec $cripts/backlight.sh + .1 # increase screen brightness
