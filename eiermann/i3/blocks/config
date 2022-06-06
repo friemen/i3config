@@ -11,10 +11,10 @@ command=$cripts/newkernel.sh
 
 [battery]
 command=$cripts/battery.sh
-label=
 min_width=50
 align=right
 color=#a3be8c
+label=
 
 [wifi]
 command=$cripts/wifi.sh wlp59s0
@@ -40,6 +40,12 @@ command=$cripts/diskfree.sh
 min_width=50
 align=right
 label=
+
+[temperature]
+command=$cripts/temperature.sh
+min_width=40
+align=right
+label=
 
 [separator]
 markup=pango
