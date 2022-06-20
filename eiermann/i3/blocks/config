@@ -3,7 +3,7 @@ color=#d8dee9
 
 [windowtitle]
 command=$cripts/windowtitle.sh
-min_width=800
+min_width=740
 align=center
 
 [newkernel]

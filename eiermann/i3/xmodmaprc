@@ -2,6 +2,9 @@
 keycode 66 = Caps_Lock
 add Lock = Caps_Lock
 
+;; Notebook Fn + a => Compose
+keycode 210 = Multi_key
+
 !!  AltGr + i/j/k/l => Up/Left/Down/Right
 !!               Shift   ?    ?    AltGr    Shift+AltGr    ?
 keycode  31 = i  I       i    I    Up       Up            rightarrow
