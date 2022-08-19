@@ -3,7 +3,7 @@ color=#d8dee9
 
 [windowtitle]
 command=$cripts/windowtitle.sh
-min_width=740
+min_width=650
 align=center
 
 [newkernel]
@@ -18,7 +18,7 @@ label=
 
 [wifi]
 command=$cripts/wifi.sh wlp59s0
-min_width=50
+min_width=30
 align=right
 label=
 
@@ -31,19 +31,19 @@ label=
 
 [memory]
 command=$cripts/memory.sh
-min_width=40
+min_width=30
 align=right
 label=
 
 [diskfree]
 command=$cripts/diskfree.sh
-min_width=50
+min_width=40
 align=right
 label=
 
 [temperature]
 command=$cripts/temperature.sh
-min_width=40
+min_width=30
 align=right
 label=
 
