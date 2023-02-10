@@ -1,28 +1,45 @@
 #!/bin/bash
 
+# use it in your i3 config like so
+# bindsym XF86AudioPlay  exec $cripts/playctl.sh play
+# bindsym XF86AudioPause exec $cripts/playctl.sh pause
+# bindsym XF86AudioStop  exec $cripts/playctl.sh stop
+# bindsym XF86AudioPrev  exec $cripts/playctl.sh prev
+# bindsym XF86AudioNext  exec $cripts/playctl.sh next
+
 command=$1
-mpv_running=$(ps h -C mpv)
-if [ -z "$mpv_running" ]; then
-    echo "using mpc commands"
-    mpd_host=gray
+
+# clementine
+ps h -C clementine | grep clementine
+clementine_running=$?
+if [ "$clementine_running" == "0" ]; then
+    echo "using clementine commands"
+    socket_file="$HOME/.config/mpv/socket"
+
     case "$command" in
         play | pause)
-            mpc --host=$mpd_host toggle
+            clementine --play-pause
             ;;
         stop)
-            mpc --host=$mpd_host stop
+            clementine --stop
             ;;
         prev)
-            mpc --host=$mpd_host prev
+            clementine --previous
             ;;
         next)
-            mpc --host=$mpd_host next
+            clementine --next
             ;;
         *)
             echo "Unknown command"
             ;;
     esac
-else
+    exit 0
+fi
+
+# mpv
+ps h -C mpv | grep mpv
+mpv_running=$?
+if [ "$mpv_running" == "0" ]; then
     echo "using mpv commands"
     socket_file="$HOME/.config/mpv/socket"
 
@@ -40,11 +57,26 @@ else
             echo "Unknown command"
             ;;
     esac
+    exit 0
 fi
 
-# use it in your i3 config like so
-# bindsym XF86AudioPlay  exec $cripts/playctl.sh play
-# bindsym XF86AudioPause exec $cripts/playctl.sh pause
-# bindsym XF86AudioStop  exec $cripts/playctl.sh stop
-# bindsym XF86AudioPrev  exec $cripts/playctl.sh prev
-# bindsym XF86AudioNext  exec $cripts/playctl.sh next
+# fallback is music player daemon
+echo "using mpc commands"
+mpd_host=gray
+case "$command" in
+    play | pause)
+        mpc --host=$mpd_host toggle
+        ;;
+    stop)
+        mpc --host=$mpd_host stop
+        ;;
+    prev)
+        mpc --host=$mpd_host prev
+        ;;
+    next)
+        mpc --host=$mpd_host next
+        ;;
+    *)
+        echo "Unknown command"
+        ;;
+esac
