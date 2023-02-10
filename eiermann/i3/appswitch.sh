@@ -83,7 +83,7 @@ case $app in
 	focus_or_start krusader krusader
 	;;
     Mixxx)
-	focus_or_start Mixxx ~/bin/music-dj.sh
+	focus_or_start Mixxx ~/bin/music--start-mixxx.sh
 	;;
     Nexus)
 	focus_or_start_browser "Nexus" http://nexus.doctronic.de:8080/nexus
