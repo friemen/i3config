@@ -213,7 +213,7 @@ client.urgent           $urgent $urgent #ffffff $urgent   $urgent
 # sudo apt install compton i3blocks feh pavucontrol clementine xbacklight fonts-font-awesome udiskie redshift flameshot htop
 
 # SSH-Agent needs to be started
-exec_always $cripts/gnome-keyring.sh
+exec_always $cripts/ssh-agent.sh
 
 # Transparency
 exec --no-startup-id killall compton ; compton -Gf -b --vsync opengl

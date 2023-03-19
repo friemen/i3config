@@ -252,7 +252,7 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
 
 # SSH-Agent needs to be started
-exec_always $cripts/gnome-keyring.sh
+exec_always $cripts/ssh-agent.sh
 
 # fix resolution and primary setting
 exec --no-startup-id xrandr --output eDP-1-1 --mode 1920x1080 --primary --brightness 0.7
