@@ -4,20 +4,20 @@
 
 ##############################################################################
 # Packages to install on Ubuntu 20.04
-# sudo apt install i3blocks i3lock i3status suckless-tools compton feh pavucontrol mpv fonts-font-awesome udiskie flameshot blueman htop inputplug birdtray imagemagick ranger
+# sudo apt install bc birdtray blueman compton dunst feh fonts-font-awesome flameshot htop i3blocks i3lock i3status imagemagick inputplug libnotify-bin mpv network-manager-gnome pavucontrol ranger suckless-tools udiskie
 
 ##############################################################################
 # Desktop env feature checklist
 # - Display brightness control --> xrandr
 # - Support for multiple monitors --> xrandr
-# - Display of notifications
+# - Display of notifications --> dunst
 # - Screen lock
 # - Switch from/to external soundcard --> pavucontrol
 # - Automount of USB devices --> udiskie
 # - Network device+connection control --> nmcli + nm-applet
 # - Bluetooth control --> blueman
 # - Keyboard speed, US layout
-# - Play music using mpv
+# - Control music playback via keyboard using mpv, clementine or mpc->mpd
 # - Volume control via keyboard
 # - Trackpad natural scrolling and tapping
 # - Nightlight/Daylight --> xrandr
@@ -306,13 +306,12 @@ bindsym XF86AudioLowerVolume exec --no-startup-id $cripts/volctl.sh -5%
 # mute sound
 bindsym XF86AudioMute exec --no-startup-id  $cripts/volctl.sh mute
 
-# mpv audio controls
+# keyboard playback controls
 bindsym XF86AudioPlay  exec $cripts/playctl.sh play
 bindsym XF86AudioPause exec $cripts/playctl.sh pause
 bindsym XF86AudioStop  exec $cripts/playctl.sh stop
 bindsym XF86AudioPrev  exec $cripts/playctl.sh prev
 bindsym XF86AudioNext  exec $cripts/playctl.sh next
-
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec $cripts/backlight.sh + .1 # increase screen brightness
