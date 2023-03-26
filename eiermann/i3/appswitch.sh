@@ -55,7 +55,7 @@ case $app in
     Jenkins)
 	focus_or_start_browser "Jenkins" http://jenkins2.doctronic.de
 	;;
-    JIRA)
+    Jira)
 	focus_or_start_browser "JIRA" https://jira.doctronic.de/
 	;;
     Keepass)
