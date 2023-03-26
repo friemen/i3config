@@ -1,6 +1,6 @@
 #!/bin/bash
 
-internal=eDP-1-1
+internal=eDP-1
 command=$1
 step=$2
 new_gamma=$2

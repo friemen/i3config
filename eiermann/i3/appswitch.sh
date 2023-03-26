@@ -34,18 +34,6 @@ focus_or_start() {
 app=`cat ~/.config/i3/appswitch-items.txt | dmenu -i -b -sb '#bf616a'`
 
 case $app in
-    Calculator)
-        gnome-calculator &
-        ;;
-    Calendar)
-	focus_or_start Gnome-calendar gnome-calendar
-        ;;
-    Cantata)
-	focus_or_start Cantata cantata
-        ;;
-    Clementine)
-	focus_or_start Clementine clementine
-	;;
     Cloud)
 	focus_or_start_browser "Nextcloud" https://cloud.doctronic.de/index.php/login?redirect_url=/index.php/apps/files/
 	;;
@@ -57,12 +45,6 @@ case $app in
         ;;
     DTMS)
 	focus_or_start_browser "dtms" https://dtms.doctronic.de/ui#timelogging
-	;;
-    Emacs)
-	XMODIFIERS=@im=none focus_or_start Emacs emacs
-	;;
-    Firefox)
-	focus_or_start_browser "Firefox" https://www.google.de
 	;;
     Gerrit)
 	focus_or_start_browser "gerrit" http://gerrit.doctronic.de/login/%23%2Fq%2Fstatus%3Aopen
@@ -79,24 +61,12 @@ case $app in
     Keepass)
 	~/bin/dt-keepass.sh &
 	;;
-    Krusader)
-	focus_or_start krusader krusader
-	;;
-    Mixxx)
-	~/bin/music--start-mixxx.sh
-	;;
     Nexus)
 	focus_or_start_browser "Nexus" http://nexus.doctronic.de:8080/nexus
 	;;
     Search)
         i3-msg workspace "3: "
 	firefox &
-	;;
-    Skype)
-	focus_or_start Skype skypeforlinux
-	;;
-    Slack)
-	focus_or_start Slack slack
 	;;
     System...)
 	~/.config/i3/syscommand.sh &
@@ -107,11 +77,10 @@ case $app in
     Ticket...)
 	i3-input -P "JIRA Nr: " -F "exec firefox -new-window https://jira.doctronic.de/browse/%s"
 	;;
-    Thunderbird)
-	focus_or_start Thunderbird thunderbird
-	;;
     Whereby)
-	focus_or_start_browser "whereby.com" https://doctronic.whereby.com
+        i3-msg workspace "3: "
+	focus_or_start_browser "whereby.com" https://doctronic.whereby.com/falko
+        i3-msg move workspace to output eDP-1
 	;;
     WindowsVM)
 	VBoxManage startvm doctronic &

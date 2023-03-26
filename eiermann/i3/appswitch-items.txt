@@ -1,7 +1,3 @@
-Calculator
-Calendar
-Cantata
-Clementine
 Cloud
 Confluence
 Displays...
@@ -14,7 +10,6 @@ Jenkins
 JIRA
 Keepass
 Krusader
-Mixxx
 Nexus
 Search
 Skype

@@ -7,10 +7,11 @@ wallpaper() {
 
 cripts="$( cd "$( dirname "$0" )" && pwd )"
 
-internal=eDP-1-1
-dp1=DP-1-1-1
-dp2=DP-1-1-2
-dp3=DP-1-3
+# find these with command: xrandr
+internal=eDP-1
+dp1=DP-1
+dp2=DP-2
+dp3=DP-3
 mode=$1
 
 

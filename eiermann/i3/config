@@ -252,10 +252,15 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
 
 # SSH-Agent needs to be started
+# if this doesn't work, put the following line into ~/.profile
+# eval $(ssh-agent -s)
+# or
+# eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+# export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 exec_always $cripts/ssh-agent.sh
 
 # fix resolution and primary setting
-exec --no-startup-id xrandr --output eDP-1-1 --mode 1920x1080 --primary --brightness 0.7
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --primary --brightness 0.7
 
 # Transparency
 exec --no-startup-id killall compton ; compton -Gf -b --vsync opengl
@@ -328,9 +333,9 @@ bindsym $mod+Ctrl+p exec --no-startup-id gnome-terminal --title "Htop" -e htop
 for_window [title="Htop"] floating enable, resize set 1600 600, move position center
 
 # Open calendar in floating terminal window
-bindsym $mod+Ctrl+c exec --no-startup-id gnome-terminal --title "3 months" -e $cripts/calendar.sh
-for_window [title="3 months"] floating enable, resize set 640 200
+bindsym $mod+Ctrl+c exec --no-startup-id gnome-calendar
 
+# Open ranger in terminal window
 bindsym $mod+Ctrl+r exec --no-startup-id gnome-terminal --title "Ranger" -e ranger
 
 # Open flameshot
@@ -346,19 +351,21 @@ bindsym $mod+c exec --no-startup-id $cripts/cheatsheets.sh
 
 # Specific window settings
 # find classnames by starting xprop and clicking the desired window
-for_window [window_role="task_dialog|app|bubble|pop-up|page-info|Preferences"] floating enable
-for_window [class="Gnome-calculator"] floating enable
-for_window [class="KeePass2"] floating enable
-for_window [class="keepassxc"] floating enable
-for_window [class="Pavucontrol"] floating enable, resize set 640 800, move position center
 for_window [class="Arandr"] floating enable, resize set 800 400, move position center
-for_window [class="gpick"] floating enable, resize set 600 400
-for_window [class="Gnome-calendar"] floating enable
-for_window [title="gedit"] floating enable, resize set 600 400, move position 1320 680
 for_window [class="cheatsheet"] fullscreen
 for_window [class="Eog"] floating enable, resize set 800 800, move position center
+for_window [title="gedit"] floating enable, resize set 600 400, move position 1320 680
+for_window [class="Gnome-calculator"] floating enable
+for_window [class="Gnome-calendar"] floating enable
+for_window [class="Gnome-system-monitor"] floating enable, resize set 800 800, move position center
+for_window [class="Gpick"] floating enable, resize set 600 400
+for_window [class="keepassxc"] floating enable
+for_window [class="Pavucontrol"] floating enable, resize set 640 800, move position center
 for_window [class="vlc"] floating enable
+for_window [title="Weather"] floating enable, resize set 800 800, move position center
 for_window [title="Zoiper5"] floating enable, resize set 400 800, move position center
+# modal dialogs
+for_window [window_role="task_dialog|app|bubble|pop-up|page-info|Preferences"] floating enable
 
 # Thunderbird + Skype + Slack
 assign [class="Thunderbird"] $ws2

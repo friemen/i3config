@@ -15,16 +15,14 @@ ln -s ~/Projects/i3config/hadid/i3 ~/.config/i3
 
 ## i3-gaps
 
-i3-gaps is [a fork](https://github.com/Airblader/i3) of i3
-that allows the configuration of visual gaps between windows in tiling mode.
+As of i3 version 4.22 the gaps feature is now permanently included.
 
-Unlike i3 many official package stores do NOT include it. I built it
-myself following [the instructions](https://github.com/Airblader/i3/wiki/Building-from-source).
+Instructions to build the most recent version are here:
+https://github.com/Airblader/i3/wiki/Building-from-source
 
 After building it you need to ensure that:
 
-* default i3 is uninstalled.
-* the necessary i3-gaps executables are in your $PATH, i.e. make them available in `/usr/local/bin` like so:
+* the necessary i3 executables are in your $PATH, i.e. make them available in `/usr/local/bin` like so:
 `sudo cp i3 i3bar i3-config-wizard i3-dump-log i3-input i3-msg i3-nagbar /usr/local/bin` and
 `cd .. && sudo cp i3-dmenu-desktop i3-sensible-terminal i3-sensible-editor i3-sensible-pager i3-save-tree /usr/local/bin`
 * suckless-tools, i3status, i3lock and i3blocks is installed: `sudo apt install i3blocks i3status i3lock suckless-tools`
