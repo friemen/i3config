@@ -55,7 +55,7 @@ full_text=<span foreground="#81a1c1" size="large"></span>
 command=$cripts/displays.sh
 
 [volume]
-command=$cripts/pulseaudio.sh
+command=$cripts/volume.sh
 label=
 
 [kbdlayout]

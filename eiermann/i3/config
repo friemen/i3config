@@ -3,8 +3,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 ##############################################################################
-# Packages to install on Ubuntu 20.04
-# sudo apt install bc birdtray blueman compton dunst feh fonts-font-awesome flameshot htop i3blocks i3lock i3status imagemagick inputplug libnotify-bin mpv network-manager-gnome pavucontrol ranger suckless-tools udiskie
+# Packages to install on Pop!_OS 22.04
+# sudo apt install bc birdtray blueman compton dunst feh fonts-font-awesome flameshot htop i3blocks i3lock i3status imagemagick inputplug libnotify-bin network-manager-gnome pavucontrol suckless-tools udiskie
 
 ##############################################################################
 # Desktop env feature checklist
@@ -36,14 +36,20 @@ set $normal  #81a1c1
 set $urgent  #bf616a
 set $cripts  ~/.config/i3
 
-# Font for window titles. Will also be used by the bar unless a different font
+# font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango: Font Awesome 10
 #font pango:monospace 10
 font pango:DejaVu Sans 8
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# use Mouse+$mod to drag tiled windows to other position
+tiling_drag modifier
+
+# selecting the already active workspace will select the most recent
+# workspace_auto_back_and_forth yes
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -219,10 +225,11 @@ for_window [floating] border normal
 
 ##############################################################################
 bar {
+    position top
     output primary
     tray_output primary
-    position top
     font pango: Font Awesome 8
+    padding 2px
     separator_symbol "   "
     status_command cripts=$cripts/blocks i3blocks -c $cripts/blocks/config
     colors {
@@ -354,6 +361,7 @@ bindsym $mod+c exec --no-startup-id $cripts/cheatsheets.sh
 for_window [class="Arandr"] floating enable, resize set 800 400, move position center
 for_window [class="cheatsheet"] fullscreen
 for_window [class="Eog"] floating enable, resize set 800 800, move position center
+for_window [class="Evince"] floating enable, resize set 1200 1000, move position center
 for_window [title="gedit"] floating enable, resize set 600 400, move position 1320 680
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Gnome-calendar"] floating enable

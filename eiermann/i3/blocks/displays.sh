@@ -2,7 +2,7 @@
 
 connected_displays=$(xrandr | grep -e " connected" | sed -n 's/\([^\s]\)\s.*/\1/p' | tr '\n' ' ')
 display_number=$(echo "$connected_displays" | wc -w)
-internal_display_name="eDP-1-1"
+internal_display_name="eDP-1"
 internal_display_symbol=""
 external_display_symbol=""
 
