@@ -34,7 +34,8 @@ set $mod     Mod4
 set $black   #2e3440
 set $normal  #81a1c1
 set $urgent  #bf616a
-set $cripts  ~/.config/i3
+set $scriptdir  ~/.config/i3
+set $tempdir /tmp/i3-$USERNAME
 
 # font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -149,16 +150,16 @@ bindsym $mod+0 workspace $ws10
 bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
-bindsym $mod+Mod1+1 exec --no-startup-id $cripts/move-and-follow.sh $ws1
-bindsym $mod+Mod1+2 exec --no-startup-id $cripts/move-and-follow.sh $ws2
-bindsym $mod+Mod1+3 exec --no-startup-id $cripts/move-and-follow.sh $ws3
-bindsym $mod+Mod1+4 exec --no-startup-id $cripts/move-and-follow.sh $ws4
-bindsym $mod+Mod1+5 exec --no-startup-id $cripts/move-and-follow.sh $ws5
-bindsym $mod+Mod1+6 exec --no-startup-id $cripts/move-and-follow.sh $ws6
-bindsym $mod+Mod1+7 exec --no-startup-id $cripts/move-and-follow.sh 7
-bindsym $mod+Mod1+8 exec --no-startup-id $cripts/move-and-follow.sh 8
-bindsym $mod+Mod1+9 exec --no-startup-id $cripts/move-and-follow.sh 9
-bindsym $mod+Mod1+0 exec --no-startup-id $cripts/move-and-follow.sh $ws10
+bindsym $mod+Mod1+1 exec --no-startup-id $scriptdir/move-and-follow.sh $ws1
+bindsym $mod+Mod1+2 exec --no-startup-id $scriptdir/move-and-follow.sh $ws2
+bindsym $mod+Mod1+3 exec --no-startup-id $scriptdir/move-and-follow.sh $ws3
+bindsym $mod+Mod1+4 exec --no-startup-id $scriptdir/move-and-follow.sh $ws4
+bindsym $mod+Mod1+5 exec --no-startup-id $scriptdir/move-and-follow.sh $ws5
+bindsym $mod+Mod1+6 exec --no-startup-id $scriptdir/move-and-follow.sh $ws6
+bindsym $mod+Mod1+7 exec --no-startup-id $scriptdir/move-and-follow.sh 7
+bindsym $mod+Mod1+8 exec --no-startup-id $scriptdir/move-and-follow.sh 8
+bindsym $mod+Mod1+9 exec --no-startup-id $scriptdir/move-and-follow.sh 9
+bindsym $mod+Mod1+0 exec --no-startup-id $scriptdir/move-and-follow.sh $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -231,7 +232,7 @@ bar {
     font pango: Font Awesome 8
     padding 2px
     separator_symbol "   "
-    status_command cripts=$cripts/blocks i3blocks -c $cripts/blocks/config
+    status_command scriptdir=$scriptdir/blocks i3blocks -c $scriptdir/blocks/config
     colors {
       background $black
       statusline #d8dee9
@@ -264,7 +265,7 @@ client.background       #FFFFFF
 # or
 # eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 # export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
-exec_always $cripts/ssh-agent.sh
+exec_always $scriptdir/ssh-agent.sh
 
 # fix resolution and primary setting
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --primary --brightness 0.7
@@ -276,19 +277,19 @@ exec --no-startup-id killall compton ; compton -Gf -b --vsync opengl
 exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
 
 # Screen lock
-bindsym $mod+Ctrl+l exec --no-startup-id $cripts/lock.sh
+bindsym $mod+Ctrl+l exec --no-startup-id $scriptdir/lock.sh
 
 # Suspend
-bindsym $mod+Ctrl+Escape exec --no-startup-id $cripts/lock.sh && systemctl suspend
+bindsym $mod+Ctrl+Escape exec --no-startup-id $scriptdir/lock.sh && systemctl suspend
 
 # Cycling through keyboard layouts
-bindsym $mod+F9 exec --no-startup-id $cripts/cycle-kbd-layout.sh
+bindsym $mod+F9 exec --no-startup-id $scriptdir/cycle-kbd-layout.sh
 
 # Setup keyboard layout on restart
-exec --no-startup-id $cripts/setup-kbd.sh "de(nodeadkeys)"
+exec --no-startup-id $scriptdir/setup-kbd.sh "de(nodeadkeys)"
 
 # React on plugging in/out keyboards
-exec --no-startup-id inputplug -0 -c $cripts/on-inputplug.sh
+exec --no-startup-id inputplug -0 -c $scriptdir/on-inputplug.sh
 
 # Trackpad: natural scrolling, speed, tap support
 exec --no-startup-id xinput set-prop 'SYNA2393:00 06CB:7A13 Touchpad' 'libinput Natural Scrolling Enabled' 1
@@ -312,28 +313,28 @@ exec --no-startup-id blueman-applet &
 
 # Pulse Audio controls
 # increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id $cripts/volctl.sh +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id $scriptdir/volctl.sh +5%
 # decrease sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id $cripts/volctl.sh -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id $scriptdir/volctl.sh -5%
 # mute sound
-bindsym XF86AudioMute exec --no-startup-id  $cripts/volctl.sh mute
+bindsym XF86AudioMute exec --no-startup-id  $scriptdir/volctl.sh mute
 
 # keyboard playback controls
-bindsym XF86AudioPlay  exec $cripts/playctl.sh play
-bindsym XF86AudioPause exec $cripts/playctl.sh pause
-bindsym XF86AudioStop  exec $cripts/playctl.sh stop
-bindsym XF86AudioPrev  exec $cripts/playctl.sh prev
-bindsym XF86AudioNext  exec $cripts/playctl.sh next
+bindsym XF86AudioPlay  exec $scriptdir/playctl.sh play
+bindsym XF86AudioPause exec $scriptdir/playctl.sh pause
+bindsym XF86AudioStop  exec $scriptdir/playctl.sh stop
+bindsym XF86AudioPrev  exec $scriptdir/playctl.sh prev
+bindsym XF86AudioNext  exec $scriptdir/playctl.sh next
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec $cripts/backlight.sh + .1 # increase screen brightness
-bindsym XF86MonBrightnessDown exec $cripts/backlight.sh - .1 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec $scriptdir/backlight.sh + .1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec $scriptdir/backlight.sh - .1 # decrease screen brightness
 
 # move workspace between outputs
 bindsym $mod+z move workspace to output right
 
 # special program launcher
-bindsym $mod+x exec --no-startup-id $cripts/appswitch.sh
+bindsym $mod+x exec --no-startup-id $scriptdir/appswitch.sh
 
 # Open htop in floating terminal window
 bindsym $mod+Ctrl+p exec --no-startup-id gnome-terminal --title "Htop" -e htop
@@ -353,8 +354,8 @@ bindsym $mod+Ctrl+s exec --no-startup-id flameshot gui
 for_window [class=".*"] title_format "  %title"
 
 # Cheatsheets
-bindsym $mod+slash exec --no-startup-id $cripts/cheatsheets.sh
-bindsym $mod+c exec --no-startup-id $cripts/cheatsheets.sh
+bindsym $mod+slash exec --no-startup-id $scriptdir/cheatsheets.sh
+bindsym $mod+c exec --no-startup-id $scriptdir/cheatsheets.sh
 
 # Specific window settings
 # find classnames by starting xprop and clicking the desired window

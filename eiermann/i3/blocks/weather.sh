@@ -2,7 +2,9 @@
 
 interval=$(( 10*60 ))
 
-cache=/tmp/weather.txt
+tempdir=/tmp/i3-$USERNAME
+mkdir -p $tempdir
+cache=$tempdir/weather.txt
 cache_timestamp=`stat -c %Y $cache`
 now=`date +%s`
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cmd=`cat ~/.config/i3/syscommand-items.txt | dmenu -i -b -nb \#ebcb8b -nf \#2e3440`
-cripts="$( cd "$( dirname "$0" )" && pwd )"
+scriptdir="$( cd "$( dirname "$0" )" && pwd )"
 
 case $cmd in
     Off)
@@ -11,7 +11,7 @@ case $cmd in
 	systemctl reboot
 	;;
     Suspend)
-	$cripts/lock.sh
+	$scriptdir/lock.sh
 	systemctl suspend
 	;;
     Logout)

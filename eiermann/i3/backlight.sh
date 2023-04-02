@@ -6,11 +6,13 @@ step=$2
 new_gamma=$2
 
 current_brightness=`xrandr --verbose | grep -m 1 -i brightness | sed -n 's/\s*Brightness:\s*\([0-9.]*\)/\1/p'`
+tempdir=/tmp/i3-$USERNAME
+mkdir -p $tempdir
 
 # xrandr bug causes xrandr to return inverted gamma value in xrand --verbose
 # current_gamma=`xrandr --verbose | grep -m 1 -i gamma | sed -n 's/\s*Gamma:\s*\([0-9.]*\)/\1/p'`
 
-gamma_file="/tmp/i3-$USER-gamma"
+gamma_file="$tempdir/gamma"
 if [[ -e $gamma_file ]]; then
     current_gamma=`cat $gamma_file`
 else

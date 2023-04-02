@@ -5,9 +5,9 @@ wallpaper() {
     feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
 }
 
-cripts="$( cd "$( dirname "$0" )" && pwd )"
+scriptdir="$( cd "$( dirname "$0" )" && pwd )"
 
-# find these with command: xrandr
+# find these with command: xrandr --listactivemonitors
 internal=eDP-1
 dp1=DP-1-1
 dp2=DP-1-2
@@ -102,11 +102,11 @@ case $mode in
         ;;
     N)
         echo "Gamma correction for nightlight"
-        $cripts/backlight.sh gamma 1.0:0.8:0.6
+        $scriptdir/backlight.sh gamma 1.0:0.8:0.6
         ;;
     D)
         echo "Gamma correction for daylight"
-        $cripts/backlight.sh gamma 1.0:1.0:1.0
+        $scriptdir/backlight.sh gamma 1.0:1.0:1.0
         ;;
 esac
 

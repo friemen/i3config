@@ -9,9 +9,12 @@
 geometry=`xdpyinfo | grep dimensions | sed -n 's/.*dimensions:\ \+\([0-9]\+\x[0-9]\+\)\ .*/\1/p'`
 wallpapers=(~/Pictures/Wallpapers/*)
 
+tempdir=/tmp/i3-$USERNAME
+mkdir -p $tempdir
+
 wallpaper=${wallpapers[RANDOM % ${#wallpapers[@]}]}
 lock=~/.config/i3/lock.png
-locked_wallpaper=/tmp/i3-lockscreen.png
+locked_wallpaper=$tempdir/i3-lockscreen.png
 
 echo "Wallpaper file $wallpaper"
 

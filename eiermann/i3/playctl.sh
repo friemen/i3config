@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # use it in your i3 config like so
-# bindsym XF86AudioPlay  exec $cripts/playctl.sh play
-# bindsym XF86AudioPause exec $cripts/playctl.sh pause
-# bindsym XF86AudioStop  exec $cripts/playctl.sh stop
-# bindsym XF86AudioPrev  exec $cripts/playctl.sh prev
-# bindsym XF86AudioNext  exec $cripts/playctl.sh next
+# bindsym XF86AudioPlay  exec $scriptdir/playctl.sh play
+# bindsym XF86AudioPause exec $scriptdir/playctl.sh pause
+# bindsym XF86AudioStop  exec $scriptdir/playctl.sh stop
+# bindsym XF86AudioPrev  exec $scriptdir/playctl.sh prev
+# bindsym XF86AudioNext  exec $scriptdir/playctl.sh next
 
 command=$1
 

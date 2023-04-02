@@ -14,5 +14,5 @@ if [[ "$current_layout" == "$us" ]]; then
     next_layout="$de"
 fi
 
-cripts="$( cd "$( dirname "$0" )" && pwd )"
-$cripts/setup-kbd.sh "$next_layout"
+scriptdir="$( cd "$( dirname "$0" )" && pwd )"
+$scriptdir/setup-kbd.sh "$next_layout"

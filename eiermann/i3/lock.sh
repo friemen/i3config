@@ -6,12 +6,15 @@
 # converts it to the current screen resolution and starts i3-lock
 # with it
 
+tempdir=/tmp/i3-$USERNAME
+mkdir -p $tempdir
+
 geometry=`xdpyinfo | grep dimensions | sed -n 's/.*dimensions:\ \+\([0-9]\+\x[0-9]\+\)\ .*/\1/p'`
 wallpapers=(~/Pictures/Wallpapers/*)
 
 wallpaper=${wallpapers[RANDOM % ${#wallpapers[@]}]}
 lock=~/.config/i3/lock.png
-locked_wallpaper=/tmp/i3-lockscreen.png
+locked_wallpaper=$tempdir/lockscreen.png
 
 echo "Wallpaper file $wallpaper"
 

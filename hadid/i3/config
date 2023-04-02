@@ -5,7 +5,7 @@
 set $mod     Mod4
 set $normal  #5D53C3
 set $urgent  #D37458
-set $cripts  ~/.config/i3
+set $scriptdir  ~/.config/i3
 
 # Mod1 aka Alt_L
 
@@ -114,16 +114,16 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
-bindsym $mod+Mod1+1 exec --no-startup-id $cripts/move-and-follow.sh $ws1
-bindsym $mod+Mod1+2 exec --no-startup-id $cripts/move-and-follow.sh $ws2
-bindsym $mod+Mod1+3 exec --no-startup-id $cripts/move-and-follow.sh $ws3
-bindsym $mod+Mod1+4 exec --no-startup-id $cripts/move-and-follow.sh $ws4
-bindsym $mod+Mod1+5 exec --no-startup-id $cripts/move-and-follow.sh $ws5
-bindsym $mod+Mod1+6 exec --no-startup-id $cripts/move-and-follow.sh $ws6
-bindsym $mod+Mod1+7 exec --no-startup-id $cripts/move-and-follow.sh 7
-bindsym $mod+Mod1+8 exec --no-startup-id $cripts/move-and-follow.sh 8
-bindsym $mod+Mod1+9 exec --no-startup-id $cripts/move-and-follow.sh 9
-bindsym $mod+Mod1+0 exec --no-startup-id $cripts/move-and-follow.sh $ws10
+bindsym $mod+Mod1+1 exec --no-startup-id $scriptdir/move-and-follow.sh $ws1
+bindsym $mod+Mod1+2 exec --no-startup-id $scriptdir/move-and-follow.sh $ws2
+bindsym $mod+Mod1+3 exec --no-startup-id $scriptdir/move-and-follow.sh $ws3
+bindsym $mod+Mod1+4 exec --no-startup-id $scriptdir/move-and-follow.sh $ws4
+bindsym $mod+Mod1+5 exec --no-startup-id $scriptdir/move-and-follow.sh $ws5
+bindsym $mod+Mod1+6 exec --no-startup-id $scriptdir/move-and-follow.sh $ws6
+bindsym $mod+Mod1+7 exec --no-startup-id $scriptdir/move-and-follow.sh 7
+bindsym $mod+Mod1+8 exec --no-startup-id $scriptdir/move-and-follow.sh 8
+bindsym $mod+Mod1+9 exec --no-startup-id $scriptdir/move-and-follow.sh 9
+bindsym $mod+Mod1+0 exec --no-startup-id $scriptdir/move-and-follow.sh $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -165,7 +165,7 @@ bar {
     position top
     font pango: Font Awesome 8
     separator_symbol "   "
-    status_command cripts=$cripts/blocks i3blocks -c $cripts/blocks/config
+    status_command scriptdir=$scriptdir/blocks i3blocks -c $scriptdir/blocks/config
     colors {
       background #000000
       statusline #FFFFFF
@@ -213,7 +213,7 @@ client.urgent           $urgent $urgent #ffffff $urgent   $urgent
 # sudo apt install compton i3blocks feh pavucontrol clementine xbacklight fonts-font-awesome udiskie redshift flameshot htop
 
 # SSH-Agent needs to be started
-exec_always $cripts/ssh-agent.sh
+exec_always $scriptdir/ssh-agent.sh
 
 # Transparency
 exec --no-startup-id killall compton ; compton -Gf -b --vsync opengl
@@ -225,13 +225,13 @@ exec --no-startup-id redshift -l 50.73438:7.09549
 exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
 
 # Screen lock
-bindsym $mod+Ctrl+l exec --no-startup-id $cripts/lock.sh
+bindsym $mod+Ctrl+l exec --no-startup-id $scriptdir/lock.sh
 
 # Cycling through keyboard layouts
-bindsym $mod+F9 exec --no-startup-id $cripts/cycle-kbd-layout.sh
+bindsym $mod+F9 exec --no-startup-id $scriptdir/cycle-kbd-layout.sh
 
 # Setup keyboard layout on restart
-exec --no-startup-id $cripts/setup-kbd.sh "de(nodeadkeys)"
+exec --no-startup-id $scriptdir/setup-kbd.sh "de(nodeadkeys)"
 
 # Trackpad Natural Scrolling
 exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
@@ -247,11 +247,11 @@ exec --no-startup-id nm-applet &
 
 # Pulse Audio controls
 # increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id $cripts/volctl.sh +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id $scriptdir/volctl.sh +5%
 # decrease sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id $cripts/volctl.sh -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id $scriptdir/volctl.sh -5%
 # mute sound
-bindsym XF86AudioMute exec --no-startup-id  $cripts/volctl.sh mute
+bindsym XF86AudioMute exec --no-startup-id  $scriptdir/volctl.sh mute
 
 # Music playback control based on Clementine
 bindsym $mod+F10 exec --no-startup-id clementine --toggle-pretty-osd
@@ -275,14 +275,14 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 bindsym $mod+less move workspace to output right
-bindsym $mod+x exec --no-startup-id $cripts/appswitch.sh
+bindsym $mod+x exec --no-startup-id $scriptdir/appswitch.sh
 
 # Open htop in floating terminal window
 bindsym $mod+Ctrl+p exec --no-startup-id gnome-terminal --title "Htop" -e htop
 for_window [title="Htop"] floating enable, resize set 1920 600, move position center
 
 # Open calendar in floating terminal window
-bindsym $mod+Ctrl+c exec --no-startup-id gnome-terminal --title "3 months" -e $cripts/calendar.sh
+bindsym $mod+Ctrl+c exec --no-startup-id gnome-terminal --title "3 months" -e $scriptdir/calendar.sh
 for_window [title="3 months"] floating enable, resize set 640 200
 
 # Open flameshot

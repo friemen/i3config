@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cripts="$( cd "$( dirname "$0" )" && pwd )"
+scriptdir="$( cd "$( dirname "$0" )" && pwd )"
 
 echo >&2 "$@"
 
@@ -14,9 +14,9 @@ description="$*"
 #notify-send -t 2000 "$event $type $description"
 
 if echo "$event $type $description" | grep -q "XIDeviceEnabled XISlaveKeyboard.*System Control"; then
-    $cripts/setup-kbd.sh "us(altgr-intl)"
+    $scriptdir/setup-kbd.sh "us(altgr-intl)"
 fi
 
 if echo "$event $type" | grep -q "XIDeviceDisabled XISlaveKeyboard"; then
-    $cripts/setup-kbd.sh "de(nodeadkeys)"
+    $scriptdir/setup-kbd.sh "de(nodeadkeys)"
 fi

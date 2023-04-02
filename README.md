@@ -75,8 +75,3 @@ Key binding | Function
 ## Other keybindings (setxkbmap, xmodmap)
 
 <kbd>Scroll lock</kbd>                                          | Compose key
-
-## Ideas / Improvements
-
-- Document shortcuts as keyboad editor layouts
-- Write/read tempfiles to/from a /tmp/i3-user folder
