@@ -216,6 +216,13 @@ mode "move" {
 
 bindsym $mod+m mode "move" focus floating
 
+# CapsLock indicator
+mode "CAPSLOCK" {
+    bindsym Caps_Lock mode "default"
+}
+
+bindsym Caps_Lock mode "CAPSLOCK"
+
 ##############################################################################
 # gaps config
 # see https://github.com/Airblader/i3/blob/gaps-next/README.md
