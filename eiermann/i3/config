@@ -10,23 +10,21 @@
 # Desktop env feature checklist
 # - Display brightness control --> xrandr
 # - Support for multiple monitors --> xrandr
+# - Nightlight/Daylight --> xrandr
 # - Display of notifications --> dunst
-# - Screen lock
+# - Screen lock --> i3lock
+# - Screen saver --> xset
 # - Switch from/to external soundcard --> pavucontrol
 # - Automount of USB devices --> udiskie
 # - Network device+connection control --> nmcli + nm-applet
 # - Bluetooth control --> blueman
-# - Keyboard speed, US layout
+# - Keyboard speed, US layout --> setxkbmap, xmodmap, xset
 # - Control music playback via keyboard using mpv, clementine or mpc->mpd
 # - Volume control via keyboard
 # - Trackpad natural scrolling and tapping
-# - Nightlight/Daylight --> xrandr
 # - Cycling through keyboard layouts --> setxkbmap, xmodmap
 # - Keyboard light toggle --> just works with Fn+F10
 # - Auto keyboard layout change on plugging keyboard in or out --> inputplug
-# - TODO Suspend on lid close
-# - TODO Automatic lock on suspend
-# - TODO Authentication integration (PolicyKit)
 
 
 # Super key is Mod4, Alt_L is Mod1
@@ -294,6 +292,9 @@ exec --no-startup-id killall compton ; compton -Gf -b --vsync opengl
 
 # Background wallpaper display
 exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
+
+# 10 minutes before screen saver sets in
+exec --no-startup-id xset +dmps s 600
 
 # Screen lock
 bindsym $mod+Ctrl+l exec --no-startup-id $scriptdir/lock.sh
