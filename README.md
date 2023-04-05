@@ -56,6 +56,8 @@ Key binding | Function
 <kbd>Super</kbd><kbd>Alt</kbd><kbd>j</kbd>                      | Move window left
 <kbd>Super</kbd><kbd>Alt</kbd><kbd>k</kbd>                      | Move window down
 <kbd>Super</kbd><kbd>Alt</kbd><kbd>l</kbd>                      | Move window right
+<kbd>Super</kbd><kbd>.</kbd>                                    | Hide window in scratchpad
+<kbd>Super</kbd><kbd>,</kbd>                                    | Toggle scratchpad window visibility
 <kbd>Super</kbd><kbd>v</kbd>                                    | Next tile split is vertical
 <kbd>Super</kbd><kbd>h</kbd>                                    | Next tile split is horizontal
 <kbd>Super</kbd><kbd>r</kbd>                                    | Activate resize mode
