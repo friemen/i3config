@@ -5,14 +5,14 @@ focus_or_start_browser() {
     local title=$1
     local url=$2
     shift 2
-    i3-msg -t get_tree | grep -ie ".*$title.* - Mozilla Firefox" >/dev/null
+    i3-msg -t get_tree | grep -ie ".*$title.*Mozilla Firefox" >/dev/null
     if [[ $? -ne 0 ]] ; then
 	echo Starting Firefox $url
 	firefox -new-window $url $* &
 	sleep 2
     fi
     echo Focusing $title
-    i3-msg [class="Firefox" title="$title"] focus
+    i3-msg [class="firefox" title=".*$title.*Mozilla Firefox"] focus
 }
 
 
@@ -79,8 +79,9 @@ case $app in
 	;;
     Whereby)
         i3-msg workspace "3: "
-	focus_or_start_browser "whereby.com" https://doctronic.whereby.com/falko
+	focus_or_start_browser "Whereby" https://doctronic.whereby.com/org
         i3-msg move workspace to output eDP-1
+        i3-msg [title=".*Whereby.*Mozilla Firefox"] focus
 	;;
     WindowsVM)
 	VBoxManage startvm doctronic &
