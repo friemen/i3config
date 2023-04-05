@@ -388,6 +388,7 @@ for_window [class="Gnome-calendar"] floating enable
 for_window [class="Gnome-system-monitor"] floating enable, resize set 800 800, move position center
 for_window [class="Gpick"] floating enable, resize set 600 400
 for_window [class="keepassxc"] floating enable
+for_window [title="^Write:"] floating enable
 for_window [class="Pavucontrol"] floating enable, resize set 640 800, move position center
 for_window [class="vlc"] floating enable
 for_window [title="Weather"] floating enable, resize set 800 800, move position center
