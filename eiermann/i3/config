@@ -247,21 +247,37 @@ bar {
     output primary
     tray_output primary
     font pango: Font Awesome 8
-    padding 2px
+    # padding top, right, bottom, left
+    padding 2px 8px 2px 8px
     separator_symbol "   "
     status_command scriptdir=$scriptdir/blocks i3blocks -c $scriptdir/blocks/config
-    colors {
-      background $black
-      statusline #d8dee9
-      separator  #3b4252
+    # non transparent bar colors
+    # colors {
+    #   background $black
+    #   statusline #d8dee9
+    #   separator  #3b4252
 
-      # class            border  bground text
-      focused_workspace  #7DB0BF $normal #FFFFFF
-      active_workspace   #333333 $black  #FFFFFF
-      inactive_workspace #333333 $black  #d8dee9
-      urgent_workspace   $urgent #900000 #FFFFFF
-      binding_mode       $urgent #900000 #FFFFFF
-  }
+    #   # class            border  bground text
+    #   focused_workspace  #7DB0BF $normal #FFFFFF
+    #   active_workspace   #333333 $black  #FFFFFF
+    #   inactive_workspace #333333 $black  #d8dee9
+    #   urgent_workspace   $urgent #900000 #FFFFFF
+    #   binding_mode       $urgent #900000 #FFFFFF
+    # }
+
+    # transparency
+    i3bar_command i3bar -t
+    # colors alpha channel needs to be zero
+    colors {
+      background #00000000
+
+      # class            border    bground   text
+      focused_workspace  #7DB0BF   $normal   #FFFFFF
+      active_workspace   #333333   #00000000 #FFFFFF
+      inactive_workspace #00000000 #00000000 #d8dee9
+      urgent_workspace   $urgent   #900000   #FFFFFF
+      binding_mode       $urgent   #900000   #FFFFFF
+    }
 }
 
 ##############################################################################
@@ -288,7 +304,7 @@ exec_always $scriptdir/ssh-agent.sh
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --primary --brightness 0.7
 
 # Transparency
-exec --no-startup-id killall compton ; compton -Gf -b --vsync opengl
+exec --no-startup-id "killall compton ; compton --daemon --inactive-opacity=0.95 --no-dnd-shadow --fading --vsync opengl"
 
 # Background wallpaper display
 exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
