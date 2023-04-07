@@ -24,7 +24,7 @@ label=
 
 [cpu]
 command=$scriptdir/cpu_usage.sh
-min_width=50
+min_width=30
 align=right
 color=#bf616a
 label=

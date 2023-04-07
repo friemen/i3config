@@ -7,7 +7,6 @@ Gitlist
 Jenkins
 Jira
 Keepass
-Krusader
 Nexus
 Search
 System...
