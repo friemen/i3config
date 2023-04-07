@@ -4,7 +4,7 @@
 
 ##############################################################################
 # Packages to install on Pop!_OS 22.04
-# sudo apt install bc birdtray blueman compton dunst feh fonts-font-awesome flameshot htop i3blocks i3lock i3status imagemagick inputplug libnotify-bin network-manager-gnome pavucontrol suckless-tools udiskie
+# sudo apt install bc blueman compton dunst feh fonts-font-awesome flameshot htop i3blocks i3lock i3status imagemagick inputplug libnotify-bin network-manager-gnome pavucontrol suckless-tools udiskie
 
 ##############################################################################
 # Desktop env feature checklist
@@ -340,9 +340,6 @@ exec --no-startup-id flameshot &
 
 # Network-Manager applet
 exec --no-startup-id nm-applet &
-
-# Thunderbird applet
-exec --no-startup-id birdtray &
 
 # Bluetooth-Manager applet
 exec --no-startup-id blueman-applet &
