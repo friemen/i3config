@@ -80,6 +80,13 @@ label=
 command=date "+%H:%M"
 label=
 
+[mail]
+interval=60
+command=$scriptdir/mailcount.sh
+min_width=20
+align=right
+label=
+
 [separator]
 markup=pango
 full_text=<span foreground="#81a1c1" size="large">  </span>
