@@ -298,7 +298,7 @@ client.background       #FFFFFF
 # or
 # eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 # export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
-exec_always $scriptdir/ssh-agent.sh
+# exec_always $scriptdir/ssh-agent.sh
 
 # fix resolution and primary setting
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --primary --brightness 0.7
