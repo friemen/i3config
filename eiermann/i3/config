@@ -119,7 +119,7 @@ bindsym $mod+Shift+space focus mode_toggle
 # t
 
 # scratchpad
-bindsym $mod+comma move scratchpad
+bindsym $mod+Shift+period move scratchpad
 bindsym $mod+period scratchpad show
 
 # focus the parent container
@@ -310,7 +310,7 @@ exec --no-startup-id "killall compton ; compton --daemon --inactive-opacity=0.95
 exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/i3.jpg
 
 # 10 minutes before screen saver sets in
-exec --no-startup-id xset +dmps s 600
+exec --no-startup-id xset +dpms s 600
 
 # Screen lock
 bindsym $mod+Ctrl+l exec --no-startup-id $scriptdir/lock.sh
