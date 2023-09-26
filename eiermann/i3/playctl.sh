@@ -62,7 +62,7 @@ fi
 
 # fallback is music player daemon
 echo "using mpc commands"
-mpd_host=gray
+mpd_host=panton
 case "$command" in
     play | pause)
         mpc --host=$mpd_host toggle

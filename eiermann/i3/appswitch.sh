@@ -78,8 +78,8 @@ case $app in
 	i3-input -P "JIRA Nr: " -F "exec firefox -new-window https://jira.doctronic.de/browse/%s"
 	;;
     Whereby)
-        i3-msg workspace "3: "
-	focus_or_start_browser "Whereby" https://doctronic.whereby.com/org
+        i3-msg workspace "7"
+	firefox -new-window https://doctronic.whereby.com/org
         i3-msg move workspace to output eDP-1
         i3-msg [title=".*Whereby.*Mozilla Firefox"] focus
 	;;
