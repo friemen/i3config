@@ -52,6 +52,7 @@ tiling_drag modifier
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+t exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+q kill

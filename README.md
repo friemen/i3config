@@ -32,7 +32,7 @@ After building it you need to ensure that:
 
 Key binding | Function
 :--- | :---
-<kbd>Super</kbd><kbd>Enter</kbd>                                | Start terminal
+<kbd>Super</kbd><kbd>Enter</kbd> or <kbd>t</kbd>                | Start terminal
 <kbd>Super</kbd><kbd>c</kbd>                                    | Dmenu cheatsheets
 <kbd>Super</kbd><kbd>d</kbd>                                    | Dmenu applications
 <kbd>Super</kbd><kbd>x</kbd>                                    | Dmenu special applications
