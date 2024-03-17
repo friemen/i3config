@@ -38,7 +38,7 @@ case $app in
 	focus_or_start_browser "Nextcloud" https://cloud.doctronic.de/index.php/login?redirect_url=/index.php/apps/files/
 	;;
     Confluence)
-	focus_or_start_browser "Confluence" https://confluence.doctronic.de
+	focus_or_start_browser "Confluence" https://doctronic.atlassian.net/wiki
 	;;
     Displays...)
 	~/.config/i3/displayswitch.sh &
@@ -47,27 +47,30 @@ case $app in
 	focus_or_start_browser "dtms" https://dtms.doctronic.de/ui#timelogging
 	;;
     Gerrit)
-	focus_or_start_browser "gerrit" http://gerrit.doctronic.de/login/%23%2Fq%2Fstatus%3Aopen
+	focus_or_start_browser "gerrit" https://gerrit.doctronic.de/login/%23%2Fq%2Fstatus%3Aopen
 	;;
     Gitlist)
-	focus_or_start_browser "GitList" http://lambda.gitlist.doctronic.de/
+	focus_or_start_browser "GitList" https://gitlist-gerrit.doctronic.de/
 	;;
     Jenkins)
-	focus_or_start_browser "Jenkins" http://jenkins2.doctronic.de
+	focus_or_start_browser "Jenkins" https://jenkins2.doctronic.de/view/clojure
 	;;
     Jira)
-	focus_or_start_browser "JIRA" https://jira.doctronic.de/
+	focus_or_start_browser "JIRA" https://doctronic.atlassian.net/jira
 	;;
     Keepass)
 	~/bin/dt-keepass.sh &
 	;;
     Nexus)
-	focus_or_start_browser "Nexus" http://nexus.doctronic.de:8080/nexus
+	focus_or_start_browser "Nexus" https://nexus.doctronic.de
 	;;
     Search)
         i3-msg workspace "3: "
 	firefox &
 	;;
+    Speech-to-text)
+        google-chrome --new-window https://www.textfromtospeech.com/de/voice-to-text/
+        ;;
     System...)
 	~/.config/i3/syscommand.sh &
 	;;

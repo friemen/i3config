@@ -8,7 +8,7 @@ Jenkins
 Jira
 Keepass
 Nexus
-Search
+Speech-to-text
 System...
 Terminal
 Ticket...
