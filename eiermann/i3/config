@@ -136,8 +136,8 @@ bindsym $mod+period scratchpad show
 
 # fa-terminal
 set $ws1 "1: "
-# fa-email
-set $ws2 "2: "
+# fa-calendar
+set $ws2 "2: "
 # fa-firefox
 set $ws3 "3: "
 set $ws4 "4: ℰ"
