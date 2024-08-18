@@ -80,6 +80,9 @@ case $app in
     Ticket...)
 	i3-input -P "JIRA Nr: " -F "exec firefox -new-window https://jira.doctronic.de/browse/%s"
 	;;
+    Unicopy)
+        ~/bin/uni--copy.sh
+        ;;
     Whereby)
         i3-msg workspace "7"
 	firefox -new-window https://doctronic.whereby.com/org
