@@ -51,8 +51,8 @@ tiling_drag modifier
 # workspace_auto_back_and_forth yes
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+t exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
+bindsym $mod+t exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -371,14 +371,14 @@ bindsym $mod+z move workspace to output right
 bindsym $mod+x exec --no-startup-id $scriptdir/appswitch.sh
 
 # Open htop in floating terminal window
-bindsym $mod+Ctrl+p exec --no-startup-id gnome-terminal --title "Htop" -e htop
+bindsym $mod+Ctrl+p exec --no-startup-id alacritty --title "Htop" -e htop
 for_window [title="Htop"] floating enable, resize set 1600 600, move position center
 
 # Open calendar in floating terminal window
 bindsym $mod+Ctrl+c exec --no-startup-id gnome-calendar
 
 # Open ranger in terminal window
-bindsym $mod+Ctrl+r exec --no-startup-id gnome-terminal --title "Ranger" -e ranger
+bindsym $mod+Ctrl+r exec --no-startup-id alacritty --title "Ranger" -e ranger
 
 # Open flameshot
 bindsym Print exec --no-startup-id flameshot gui

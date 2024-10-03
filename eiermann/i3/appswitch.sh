@@ -34,6 +34,10 @@ focus_or_start() {
 app=`cat ~/.config/i3/appswitch-items.txt | dmenu -i -b -sb '#bf616a'`
 
 case $app in
+    Citrix)
+        i3-msg workspace "10: "
+        ~/bin/ica.sh ~/Downloads/*.ica &
+        ;;
     Cloud)
 	focus_or_start_browser "Nextcloud" https://cloud.doctronic.de/index.php/login?redirect_url=/index.php/apps/files/
 	;;
