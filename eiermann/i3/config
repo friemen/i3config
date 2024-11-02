@@ -394,24 +394,31 @@ bindsym $mod+c exec --no-startup-id $scriptdir/cheatsheets.sh
 # Specific window settings
 # find classnames by starting xprop and clicking the desired window
 for_window [class="Arandr"] floating enable, resize set 800 400, move position center
+for_window [title="^Bluetooth"] floating enable
 for_window [class="cheatsheet"] fullscreen
 for_window [class="Eog"] floating enable, resize set 800 800, move position center
 for_window [class="Evince"] floating enable, resize set 1200 1000, move position center
 for_window [title="gedit"] floating enable, resize set 600 400, move position 1320 680
-for_window [class="Gnome-calculator"] floating enable
-for_window [class="Gnome-calendar"] floating enable
-for_window [class="Gnome-system-monitor"] floating enable, resize set 800 800, move position center
+for_window [class="gnome-calculator"] floating enable
+for_window [class="gnome-calendar"] floating enable
+for_window [class="gnome-system-monitor"] floating enable, resize set 800 800, move position center
 for_window [class="Gpick"] floating enable, resize set 600 400
 for_window [class="keepassxc"] floating enable
 for_window [class="libreoffice-startcenter"] kill
+for_window [class="gnome-calculator"] floating enable
 for_window [title="Network Connections"] floating enable
+for_window [title="NVIDIA Settings"] floating enable
+for_window [title="^Printers"] floating enable
 for_window [class="Pavucontrol"] floating enable, resize set 640 800, move position center
 for_window [class="vlc"] floating enable
-for_window [title="Weather"] floating enable, resize set 800 800, move position center
 for_window [title="^Write:"] floating enable
 for_window [title="Zoiper5"] floating enable, resize set 400 800, move position center
 # modal dialogs
 for_window [window_role="task_dialog|app|bubble|pop-up|page-info|Preferences"] floating enable
+# Citrix remote desktop
+for_window [title="Remotedesktopverbindung"] floating enable
+for_window [class="wfica"] floating enable
+
 
 # Thunderbird + Skype + Slack
 assign [class="Thunderbird"] $ws2
@@ -419,8 +426,8 @@ assign [class="Skype"] $ws2
 assign [class="Slack"] $ws2
 
 # Firefox
-assign [class="Firefox"] $ws3
-for_window [class="Firefox"] workspace $ws3, move to workspace $ws3
+# assign [class="firefox"] $ws3
+# for_window [class="firefox"] workspace $ws3, move to workspace $ws3
 
 # Emacs
 assign [class="Emacs"] $ws4
