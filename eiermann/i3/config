@@ -410,6 +410,7 @@ for_window [title="Network Connections"] floating enable
 for_window [title="NVIDIA Settings"] floating enable
 for_window [title="^Printers"] floating enable
 for_window [class="Pavucontrol"] floating enable, resize set 640 800, move position center
+for_window [instance="Alert" class="thunderbird-esr"] floating enable
 for_window [class="vlc"] floating enable
 for_window [title="^Write:"] floating enable
 for_window [title="Zoiper5"] floating enable, resize set 400 800, move position center
@@ -419,9 +420,8 @@ for_window [window_role="task_dialog|app|bubble|pop-up|page-info|Preferences"] f
 for_window [title="Remotedesktopverbindung"] floating enable
 for_window [class="wfica"] floating enable
 
-
 # Thunderbird + Skype + Slack
-assign [class="Thunderbird"] $ws2
+assign [instance="Mail" class="thunderbird-esr"] $ws2
 assign [class="Skype"] $ws2
 assign [class="Slack"] $ws2
 
