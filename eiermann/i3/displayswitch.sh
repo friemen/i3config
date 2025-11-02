@@ -63,7 +63,7 @@ case $mode in
         ;;
     3)
         echo "$dp1 on"
-        xrandr --output $dp1 --auto --primary --mode 1920x1080
+        xrandr --output $dp1 --auto --primary --mode 1920x1200
         sleep 1
         echo "$dp2 on"
         xrandr --output $dp2 --auto --right-of $dp1
