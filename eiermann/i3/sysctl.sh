@@ -1,6 +1,13 @@
 #!/bin/bash
 
-cmd=`cat ~/.config/i3/syscommand-items.txt | dmenu -i -b -nb \#ebcb8b -nf \#2e3440`
+cat <<EOF > ~/.config/i3/sysctl-items.txt
+Suspend
+Lock
+Logout
+Reboot
+Off
+EOF
+cmd=`cat ~/.config/i3/sysctl-items.txt | dmenu -i -b -nb \#ebcb8b -sb \#bf616a -nf \#2e3440`
 scriptdir="$( cd "$( dirname "$0" )" && pwd )"
 
 case $cmd in
@@ -17,4 +24,7 @@ case $cmd in
     Logout)
 	i3-msg exit
 	;;
+    Lock)
+        $scriptdir/lock.sh
+        ;;
 esac

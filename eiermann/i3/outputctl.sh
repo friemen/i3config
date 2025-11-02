@@ -16,7 +16,7 @@ mode=$1
 
 
 menu() {
-    local itemfile=~/.config/i3/displayswitch-items.txt
+    local itemfile=~/.config/i3/outputctl-items.txt
     echo "1-Internal only" >$itemfile
     echo "2-Office" >>$itemfile
     echo "3-Externals only" >>$itemfile

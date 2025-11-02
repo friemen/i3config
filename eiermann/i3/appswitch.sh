@@ -8,7 +8,7 @@ focus_or_start_browser() {
     i3-msg -t get_tree | grep -ie ".*$title.*Mozilla Firefox" >/dev/null
     if [[ $? -ne 0 ]] ; then
 	echo Starting Firefox $url
-	firefox -new-window $url $* &
+	firefox --new-window $url $* &
 	sleep 2
     fi
     echo Focusing $title
@@ -45,10 +45,11 @@ case $app in
 	focus_or_start_browser "Confluence" https://doctronic.atlassian.net/wiki
 	;;
     Displays...)
-	~/.config/i3/displayswitch.sh &
+	~/.config/i3/outputctl.sh &
         ;;
     DTMS)
-	focus_or_start_browser "dtms" https://dtms.doctronic.de/ui#timelogging
+        i3-msg workspace "3: "
+        focus_or_start_browser "dtms" https://dtms.doctronic.de/ui#timelogging
 	;;
     Gerrit)
 	focus_or_start_browser "gerrit" https://gerrit.doctronic.de/login/%23%2Fq%2Fstatus%3Aopen
@@ -60,6 +61,7 @@ case $app in
 	focus_or_start_browser "Jenkins" https://jenkins2.doctronic.de/view/clojure
 	;;
     Jira)
+        i3-msg workspace "3: "
 	focus_or_start_browser "JIRA" https://doctronic.atlassian.net/jira
 	;;
     Keepass)
@@ -68,28 +70,21 @@ case $app in
     Nexus)
 	focus_or_start_browser "Nexus" https://nexus.doctronic.de
 	;;
-    Search)
-        i3-msg workspace "3: "
-	firefox &
-	;;
     Speech-to-text)
         google-chrome --new-window https://www.textfromtospeech.com/de/voice-to-text/
         ;;
     System...)
-	~/.config/i3/syscommand.sh &
+	~/.config/i3/sysctl.sh &
 	;;
     Terminal)
 	i3-msg workspace "1: "
 	;;
     Ticket...)
-	i3-input -P "JIRA Nr: " -F "exec firefox -new-window https://jira.doctronic.de/browse/%s"
-	;;
-    Unicopy)
-        ~/bin/uni--copy.sh
-        ;;
+	~/.config/i3/ticket.sh &
+      	;;
     Whereby)
         i3-msg workspace "7"
-	firefox -new-window https://doctronic.whereby.com/org
+	firefox --new-window https://doctronic.whereby.com/org
         i3-msg move workspace to output eDP-1
         i3-msg [title=".*Whereby.*Mozilla Firefox"] focus
 	;;
