@@ -18,5 +18,5 @@ cache_size=`stat -c %s $cache`
 if [[ "$cache_size" -eq "0" ]]; then
     rm $cache
 else
-    cat $cache
+    cat $cache | sed -e "s/\b\(.\)/\u\1/g"
 fi
